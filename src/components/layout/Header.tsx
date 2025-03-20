@@ -1,6 +1,5 @@
 import styled from "@emotion/styled";
 import { Link } from "react-router-dom";
-import logo from "../../assets/icons/logo.svg";
 import searchIcon from "../../assets/icons/search-icon.svg";
 import cartIcon from "../../assets/icons/cart-icon.svg";
 import heartIcon from "../../assets/icons/heart-icon.svg";
@@ -110,7 +109,7 @@ const Header = () => {
     <HeaderWrapper>
       <HeaderWrapperContainer>
         <LinkHome to="/">
-          <Logo src={logo} alt="Logo Home" />
+          <Logo src={"Azimjonning-logosi.svg"} alt="Logo Home" />
         </LinkHome>
         <Nav>
           <NavLinkContainer>
