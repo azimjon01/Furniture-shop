@@ -1,9 +1,9 @@
 import styled from "@emotion/styled";
-import FeatureCard from "./FeatureCard";
 import iconOne from "../../assets/icons/icon-wrapper/icon-one.svg";
 import iconTwo from "../../assets/icons/icon-wrapper/icon-two.svg";
 import iconThree from "../../assets/icons/icon-wrapper/icon-three.svg";
 import iconFour from "../../assets/icons/icon-wrapper/icon-four.svg";
+import FeatureCard from "./Feature";
 
 const Section = styled.div({
   // width: "86vw",
