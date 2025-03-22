@@ -66,9 +66,6 @@ export const SlideText = styled.div({
   position: "absolute",
   bottom: "20px",
   left: "20px",
-  // background: "rgba(255, 255, 255, 0.8)",
-  // padding: "10px 15px",
-  // borderRadius: "5px",
   display: "flex",
 });
 
