@@ -1,10 +1,7 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import GlobalStyles from "./styles/globalStyles";
-import Layout from "./components/layout/Layout";
-import HomePage from "./pages/HomePage";
-import ShopPage from "./pages/ShopPage";
-import NotFoundPage from "./pages/NotFoundPage";
-import { AboutPage } from "./pages/about-page";
+import { Layout } from "./components/layout";
+import { About, Home, NotFound, Shop } from "./pages";
 
 function App() {
   return (
@@ -17,7 +14,7 @@ function App() {
             element={
               <>
                 <Layout>
-                  <HomePage />
+                  <Home />
                 </Layout>
               </>
             }
@@ -26,7 +23,7 @@ function App() {
             path="/shop"
             element={
               <Layout>
-                <ShopPage />
+                <Shop />
               </Layout>
             }
           />
@@ -34,11 +31,11 @@ function App() {
             path="/about"
             element={
               <Layout>
-                <AboutPage />
+                <About />
               </Layout>
             }
           />
-          <Route path="*" element={<NotFoundPage />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
     </>
