@@ -3,7 +3,7 @@ import iconOne from "../../assets/icons/icon-wrapper/icon-one.svg";
 import iconTwo from "../../assets/icons/icon-wrapper/icon-two.svg";
 import iconThree from "../../assets/icons/icon-wrapper/icon-three.svg";
 import iconFour from "../../assets/icons/icon-wrapper/icon-four.svg";
-import FeatureCard from "./Feature";
+import FeatureCard from "./feature";
 
 const Section = styled.div({
   // width: "86vw",
