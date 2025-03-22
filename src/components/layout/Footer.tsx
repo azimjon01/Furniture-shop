@@ -83,7 +83,7 @@ const Line = styled.hr({
   background: "#D8D8D8",
 });
 
-export const Footer = () => {
+const Footer = () => {
   return (
     <BigContainer>
       <Line />
@@ -136,3 +136,5 @@ export const Footer = () => {
     </BigContainer>
   );
 };
+
+export default Footer;
