@@ -4,7 +4,7 @@ import Layout from "./components/layout/Layout";
 import HomePage from "./pages/HomePage";
 import ShopPage from "./pages/ShopPage";
 import NotFoundPage from "./pages/NotFoundPage";
-import AboutPage from "./pages/AboutPage";
+import { AboutPage } from "./pages/about-page";
 
 function App() {
   return (
