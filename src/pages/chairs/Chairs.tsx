@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useChairsStore } from "./store";
+import { Chair, useChairsStore } from "./store";
 import {
   Container,
   Grid,
@@ -21,7 +21,7 @@ import {
 } from "./Chairs.styles";
 
 const Chairs = () => {
-  const { chairs, isAdmin, login, logout, addChair, updateChair, deleteChair } =
+  const { chairs, login, logout, addChair, updateChair, deleteChair } =
     useChairsStore();
 
   const [showLoginModal, setShowLoginModal] = useState(false);

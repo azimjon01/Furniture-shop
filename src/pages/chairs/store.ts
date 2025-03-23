@@ -1,6 +1,6 @@
 import { create } from "zustand";
 
-interface Chair {
+export interface Chair {
   id: number;
   name: string;
   price: number;
