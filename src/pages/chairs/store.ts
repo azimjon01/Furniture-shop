@@ -4,67 +4,130 @@ interface Chair {
   id: number;
   name: string;
   price: number;
-  image: string; // Base64 rasm
+  image: string;
+  description?: string;
 }
 
 const defaultChairs: Chair[] = [
   {
     id: 1,
-    name: "Modern Chair",
-    price: 120,
-    image:
-      "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/...", // Base64 rasm
+    name: "Minimalist Chair",
+    price: 130,
+    image: "/assets/images/chairs/chairs-one.jpeg",
+    description: "Modern minimalist chair for a stylish and simple interior.",
   },
   {
     id: 2,
-    name: "Classic Wooden Chair",
-    price: 150,
-    image:
-      "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/...",
+    name: "Luxury Armchair",
+    price: 180,
+    image: "/assets/images/chairs/chairs-two.jpeg",
+    description: "A high-end luxury armchair with premium comfort.",
+  },
+  {
+    id: 3,
+    name: "Ergonomic Office Chair",
+    price: 220,
+    image: "/assets/images/chairs/chairs-three.jpeg",
+    description: "Designed for long working hours with excellent back support.",
+  },
+  {
+    id: 4,
+    name: "Scandinavian Wooden Chair",
+    price: 140,
+    image: "/assets/images/chairs/chairs-four.jpeg",
+    description: "A stylish Scandinavian wooden chair with a minimalist look.",
+  },
+  {
+    id: 5,
+    name: "Vintage Rocking Chair",
+    price: 200,
+    image: "/assets/images/chairs/chairs-five.jpeg",
+    description: "A classic vintage rocking chair, perfect for relaxation.",
+  },
+  {
+    id: 6,
+    name: "Classic Dining Chair",
+    price: 160,
+    image: "/assets/images/chairs/chairs-six.jpeg",
+    description: "A timeless classic dining chair for elegant dining spaces.",
+  },
+  {
+    id: 7,
+    name: "Futuristic Lounge Chair",
+    price: 250,
+    image: "/assets/images/chairs/chairs-seven.jpeg",
+    description:
+      "A futuristic lounge chair with an innovative and bold design.",
+  },
+  {
+    id: 8,
+    name: "Rustic Wooden Chair",
+    price: 175,
+    image: "/assets/images/chairs/chairs-eight.jpeg",
+    description: "A handcrafted rustic wooden chair with a vintage charm.",
   },
 ];
 
 interface ChairsState {
   chairs: Chair[];
+  selectedChair: Chair | null;
+  isAdmin: boolean;
+  login: (username: string, password: string) => boolean;
+  logout: () => void;
+  selectChair: (id: number) => void;
+  clearSelection: () => void;
   addChair: (chair: Chair) => void;
   updateChair: (id: number, updatedChair: Partial<Chair>) => void;
   deleteChair: (id: number) => void;
+  purchaseChair: (id: number) => void;
 }
 
-export const useChairsStore = create<ChairsState>((set) => {
-  const storedChairs = JSON.parse(localStorage.getItem("chairs") || "null");
+export const useChairsStore = create<ChairsState>((set) => ({
+  chairs: defaultChairs,
+  selectedChair: null,
+  isAdmin: false,
 
-  if (!storedChairs) {
-    localStorage.setItem("chairs", JSON.stringify(defaultChairs));
-  }
+  login: (username, password) => {
+    if (username === "admin" && password === "1234") {
+      set({ isAdmin: true });
+      return true;
+    }
+    return false;
+  },
 
-  return {
-    chairs: storedChairs || defaultChairs,
+  logout: () => set({ isAdmin: false }),
 
-    addChair: (chair) => {
-      set((state) => {
-        const updatedChairs = [...state.chairs, chair];
-        localStorage.setItem("chairs", JSON.stringify(updatedChairs));
-        return { chairs: updatedChairs };
-      });
-    },
+  selectChair: (id) => {
+    set((state) => ({
+      selectedChair: state.chairs.find((chair) => chair.id === id) || null,
+    }));
+  },
 
-    updateChair: (id, updatedChair) => {
-      set((state) => {
-        const updatedChairs = state.chairs.map((chair) =>
-          chair.id === id ? { ...chair, ...updatedChair } : chair,
-        );
-        localStorage.setItem("chairs", JSON.stringify(updatedChairs));
-        return { chairs: updatedChairs };
-      });
-    },
+  clearSelection: () => set({ selectedChair: null }),
 
-    deleteChair: (id) => {
-      set((state) => {
-        const updatedChairs = state.chairs.filter((chair) => chair.id !== id);
-        localStorage.setItem("chairs", JSON.stringify(updatedChairs));
-        return { chairs: updatedChairs };
-      });
-    },
-  };
-});
+  addChair: (chair) => set((state) => ({ chairs: [...state.chairs, chair] })),
+
+  updateChair: (id, updatedChair) => {
+    set((state) => ({
+      chairs: state.chairs.map((chair) =>
+        chair.id === id ? { ...chair, ...updatedChair } : chair,
+      ),
+      selectedChair:
+        state.selectedChair?.id === id
+          ? { ...state.selectedChair, ...updatedChair }
+          : state.selectedChair,
+    }));
+  },
+
+  deleteChair: (id) => {
+    set((state) => ({
+      chairs: state.chairs.filter((chair) => chair.id !== id),
+      selectedChair:
+        state.selectedChair?.id === id ? null : state.selectedChair,
+    }));
+  },
+
+  purchaseChair: (id) => {
+    console.log(`Chair with ID ${id} purchased!`);
+  },
+}));

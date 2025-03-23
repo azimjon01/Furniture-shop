@@ -6,3 +6,6 @@ export { default as NotFound } from "./not-found";
 export { default as Chairs } from "./chairs";
 export { default as Tables } from "./tables";
 export { default as Sofas } from "./sofas";
+export { default as LivingRoom } from "./living-room";
+export { default as Badroom } from "./badroom";
+export { default as Office } from "./office";

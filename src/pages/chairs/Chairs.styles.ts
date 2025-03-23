@@ -1,106 +1,100 @@
 import styled from "@emotion/styled";
 
 export const Container = styled.div({
-  maxWidth: "1200px",
-  margin: "auto",
-  padding: "24px",
-});
-
-export const Title = styled.h1({
-  fontSize: "28px",
-  fontWeight: "600",
+  maxWidth: "800px",
+  margin: "0 auto",
+  padding: "20px",
   textAlign: "center",
-  marginBottom: "20px",
 });
 
 export const Grid = styled.div({
   display: "grid",
-  gridTemplateColumns: "repeat(auto-fill, minmax(250px, 1fr))",
-  gap: "24px",
+  gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))",
+  gap: "20px",
+  marginTop: "20px",
 });
 
 export const Card = styled.div({
   background: "#fff",
-  padding: "16px",
-  borderRadius: "12px",
-  boxShadow: "0 4px 12px rgba(0, 0, 0, 0.1)",
-  transition: "transform 0.2s ease, box-shadow 0.2s ease",
-  "&:hover": {
-    transform: "scale(1.03)",
-    boxShadow: "0 6px 14px rgba(0, 0, 0, 0.15)",
-  },
+  borderRadius: "8px",
+  padding: "15px",
+  boxShadow: "0px 2px 10px rgba(0, 0, 0, 0.1)",
+  textAlign: "center",
 });
 
 export const Image = styled.img({
   width: "100%",
-  height: "200px",
+  height: "150px",
   objectFit: "cover",
-  borderRadius: "10px",
+  borderRadius: "5px",
 });
 
 export const Info = styled.div({
-  marginTop: "12px",
-  textAlign: "center",
-  h3: {
-    fontSize: "20px",
-    fontWeight: "600",
+  marginTop: "10px",
+  "& h3": {
+    margin: "5px 0",
+    fontSize: "18px",
   },
-  p: {
+  "& p": {
     fontSize: "16px",
-    fontWeight: "500",
-    color: "#777",
+    color: "#555",
   },
 });
 
 export const Actions = styled.div({
+  marginTop: "10px",
   display: "flex",
   justifyContent: "center",
   gap: "10px",
-  marginTop: "12px",
 });
 
-export const Button = styled.button<{ color: string }>(({ color }) => ({
-  background: color,
-  color: "#fff",
-  fontSize: "14px",
+export const Button = styled.button<{ color?: string }>(({ color }) => ({
+  padding: "8px 12px",
   border: "none",
-  padding: "10px 16px",
+  borderRadius: "5px",
+  fontSize: "14px",
   cursor: "pointer",
-  borderRadius: "6px",
-  transition: "opacity 0.2s ease, transform 0.2s ease",
+  transition: "0.3s",
+  background: color || "#3498db",
+  color: "#fff",
   "&:hover": {
-    opacity: 0.85,
-    transform: "scale(1.05)",
+    opacity: 0.8,
   },
 }));
 
-export const AddChairForm = styled.div({
-  display: "flex",
-  gap: "12px",
+export const ModalOverlay = styled.div<{ open: boolean }>(({ open }) => ({
+  position: "fixed",
+  top: 0,
+  left: 0,
+  width: "100%",
+  height: "100%",
+  background: "rgba(0, 0, 0, 0.5)",
+  display: open ? "flex" : "none",
   justifyContent: "center",
   alignItems: "center",
-  marginBottom: "24px",
-  padding: "16px",
-  background: "#f9f9f9",
+  zIndex: 1000,
+}));
+
+export const ModalContent = styled.div({
+  background: "#fff",
+  padding: "20px",
   borderRadius: "10px",
-  boxShadow: "0 2px 8px rgba(0, 0, 0, 0.05)",
-  input: {
-    padding: "10px",
-    border: "1px solid #ccc",
-    borderRadius: "6px",
-    fontSize: "14px",
-  },
-  button: {
-    background: "#28a745",
-    color: "#fff",
-    fontSize: "14px",
-    border: "none",
-    padding: "10px 16px",
-    cursor: "pointer",
-    borderRadius: "6px",
-    transition: "opacity 0.2s ease",
-    "&:hover": {
-      opacity: 0.85,
-    },
+  width: "90%",
+  maxWidth: "400px",
+  textAlign: "center",
+  boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.2)",
+});
+
+export const CloseButton = styled.button({
+  marginTop: "10px",
+  background: "#e74c3c",
+  color: "#fff",
+  padding: "8px 12px",
+  border: "none",
+  borderRadius: "5px",
+  cursor: "pointer",
+  transition: "0.3s",
+  "&:hover": {
+    opacity: 0.8,
   },
 });
