@@ -14,7 +14,6 @@ import {
   Nav,
   NavLink,
   NavLinkContainer,
-  PagesButton,
   SearchBar,
   SearchIcon,
   SearchInput,
@@ -37,14 +36,16 @@ const Header = () => {
           </NavLinkContainer>
           <NavLinkContainer>
             <Dropdown
-              label={<NavLink to="/products">Products</NavLink>}
+              label="Products"
               options={["Chairs", "Tables", "Sofas"]}
+              links={["/chairs", "/tables", "/sofas"]}
             />
           </NavLinkContainer>
           <NavLinkContainer>
             <Dropdown
+              label="Rooms"
               options={["Living Room", "Badroom", "Office"]}
-              label={<NavLink to="/rooms">Rooms</NavLink>}
+              links={["/livingroom", "/badroom", "/office"]}
             />
           </NavLinkContainer>
           <NavLinkContainer>
