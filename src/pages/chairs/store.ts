@@ -80,10 +80,11 @@ interface ChairsState {
   updateChair: (id: number, updatedChair: Partial<Chair>) => void;
   deleteChair: (id: number) => void;
   purchaseChair: (id: number) => void;
+  loadChairs: () => void;
 }
 
-export const useChairsStore = create<ChairsState>((set) => ({
-  chairs: defaultChairs,
+export const useChairsStore = create<ChairsState>((set, get) => ({
+  chairs: JSON.parse(localStorage.getItem("chairs") || "null") || defaultChairs,
   selectedChair: null,
   isAdmin: false,
 
@@ -97,37 +98,55 @@ export const useChairsStore = create<ChairsState>((set) => ({
 
   logout: () => set({ isAdmin: false }),
 
-  selectChair: (id) => {
-    set((state) => ({
-      selectedChair: state.chairs.find((chair) => chair.id === id) || null,
-    }));
-  },
+  selectChair: (id) =>
+    set({
+      selectedChair: get().chairs.find((chair) => chair.id === id) || null,
+    }),
 
   clearSelection: () => set({ selectedChair: null }),
 
-  addChair: (chair) => set((state) => ({ chairs: [...state.chairs, chair] })),
+  addChair: (chair) =>
+    set((state) => {
+      const updatedChairs = [...state.chairs, chair];
+      localStorage.setItem("chairs", JSON.stringify(updatedChairs));
+      return { chairs: updatedChairs };
+    }),
 
-  updateChair: (id, updatedChair) => {
-    set((state) => ({
-      chairs: state.chairs.map((chair) =>
+  updateChair: (id, updatedChair) =>
+    set((state) => {
+      const updatedChairs = state.chairs.map((chair) =>
         chair.id === id ? { ...chair, ...updatedChair } : chair,
-      ),
-      selectedChair:
-        state.selectedChair?.id === id
-          ? { ...state.selectedChair, ...updatedChair }
-          : state.selectedChair,
-    }));
-  },
+      );
+      localStorage.setItem("chairs", JSON.stringify(updatedChairs));
+      return {
+        chairs: updatedChairs,
+        selectedChair:
+          state.selectedChair?.id === id
+            ? { ...state.selectedChair, ...updatedChair }
+            : state.selectedChair,
+      };
+    }),
 
-  deleteChair: (id) => {
-    set((state) => ({
-      chairs: state.chairs.filter((chair) => chair.id !== id),
-      selectedChair:
-        state.selectedChair?.id === id ? null : state.selectedChair,
-    }));
-  },
+  deleteChair: (id) =>
+    set((state) => {
+      const updatedChairs = state.chairs.filter((chair) => chair.id !== id);
+      localStorage.setItem("chairs", JSON.stringify(updatedChairs));
+      return {
+        chairs: updatedChairs,
+        selectedChair:
+          state.selectedChair?.id === id ? null : state.selectedChair,
+      };
+    }),
 
-  purchaseChair: (id) => {
-    console.log(`Chair with ID ${id} purchased!`);
+  purchaseChair: (id) => console.log(`Chair with ID ${id} purchased!`),
+
+  loadChairs: () => {
+    const storedChairs = JSON.parse(localStorage.getItem("chairs") || "null");
+    if (storedChairs) {
+      set({ chairs: storedChairs });
+    } else {
+      localStorage.setItem("chairs", JSON.stringify(defaultChairs));
+      set({ chairs: defaultChairs });
+    }
   },
 }));
