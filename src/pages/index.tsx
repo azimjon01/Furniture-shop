@@ -3,3 +3,6 @@ export { default as Home } from "./home";
 export { default as About } from "./about";
 export { default as Shop } from "./shop";
 export { default as NotFound } from "./not-found";
+export { default as Chairs } from "./chairs";
+export { default as Tables } from "./tables";
+export { default as Sofas } from "./sofas";
