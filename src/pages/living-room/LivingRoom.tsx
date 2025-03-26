@@ -1,5 +1,12 @@
+import { ProductList } from "@/components/ui";
+import { livingRoomData } from "./data";
+
 const LivingRoom = () => {
-  return <h1>Living Room</h1>;
+  return (
+    <>
+      <ProductList productData={livingRoomData} />
+    </>
+  );
 };
 
 export default LivingRoom;
