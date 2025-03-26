@@ -60,9 +60,15 @@ const Header = () => {
       </HeaderWrapperContainer>
 
       <Icons>
-        <Icon src={heartIcon} alt="Favorites" />
-        <Icon src={cartIcon} alt="Cart" />
-        <Avatar src={avatar} alt="Profile" />
+        <NavLink to="/likes">
+          <Icon src={heartIcon} alt="Favorites" />
+        </NavLink>
+        <NavLink to="/products">
+          <Icon src={cartIcon} alt="Cart" />
+        </NavLink>
+        <NavLink to="/profile">
+          <Avatar src={avatar} alt="Profile" />
+        </NavLink>
       </Icons>
     </HeaderWrapper>
   );
