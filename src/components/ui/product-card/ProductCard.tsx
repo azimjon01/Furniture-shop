@@ -1,7 +1,6 @@
 import share from "../../../assets/icons/share.svg";
 import heart from "../../../assets/icons/heart.svg";
 import heartRed from "../../../assets/icons/heart-red.svg";
-import { useState } from "react";
 import { ProductCardProps } from "./ProductCard.types";
 import {
   Button,
@@ -27,8 +26,10 @@ import {
   ShareText,
   Title,
 } from "./ProductCard.styles";
+import { useLikesStore } from "@/components/store/useLikesStore";
 
 const ProductCard: React.FC<ProductCardProps> = ({
+  id,
   image,
   title,
   description,
@@ -36,8 +37,11 @@ const ProductCard: React.FC<ProductCardProps> = ({
   oldPrice,
   discount,
   isNew,
+  category,
 }) => {
-  const [isLiked, SetIsLiked] = useState(false);
+  // const [isLiked, SetIsLiked] = useState(false);
+  const { likedItems, toggleLike } = useLikesStore();
+  const isLiked = likedItems.includes(id);
   return (
     <Card>
       <Image src={image} alt={title} />
@@ -55,7 +59,7 @@ const ProductCard: React.FC<ProductCardProps> = ({
               <HeartIcon
                 src={isLiked ? heartRed : heart}
                 alt="Heart Icon"
-                onClick={() => SetIsLiked(!isLiked)}
+                onClick={() => toggleLike(id, category)}
               />
               <HeartText>Like</HeartText>
             </HeartContainer>

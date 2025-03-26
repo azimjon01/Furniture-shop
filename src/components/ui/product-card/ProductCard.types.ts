@@ -1,4 +1,5 @@
 export interface ProductCardProps {
+  id: number;
   image: string;
   title: string;
   description: string;
@@ -6,4 +7,5 @@ export interface ProductCardProps {
   oldPrice?: string;
   discount?: string;
   isNew?: boolean;
+  category?: string;
 }
