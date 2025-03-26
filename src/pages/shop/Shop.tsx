@@ -3,13 +3,14 @@ import FeaturesSection from "@/components/ui/FeaturesSection";
 import TipsTricks from "@/components/ui/tips-tricks/TipsTricks";
 import { ProductList, Slider } from "@/components/ui";
 import FuniroGallery from "@/components/ui/funiro-galery";
+import { productData } from "@/components/ui/product-list/ProductList.data";
 
 const ShopPage = () => {
   return (
     <>
       <Slider />
       <FeaturesSection />
-      <ProductList />
+      <ProductList productData={productData} />
       <Carousel />
       <TipsTricks />
       <FuniroGallery />
