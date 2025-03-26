@@ -6,12 +6,36 @@ const AllProducts = () => {
   return (
     <>
       <S.Title>All Products</S.Title>
-      <ProductList productData={allData.chairs} />
-      <ProductList productData={allData.tables} />
-      <ProductList productData={allData.sofas} />
-      <ProductList productData={allData.livingRoom} />
-      <ProductList productData={allData.bedroomData} />
-      <ProductList productData={allData.officeData} />
+      <ProductList
+        productData={allData.categories.find(
+          (item) => item.category === "Chairs",
+        )}
+      />
+      <ProductList
+        productData={allData.categories.find(
+          (item) => item.category === "Tables",
+        )}
+      />
+      <ProductList
+        productData={allData.categories.find(
+          (item) => item.category === "Sofas",
+        )}
+      />
+      <ProductList
+        productData={allData.categories.find(
+          (item) => item.category === "Living Rooms",
+        )}
+      />
+      <ProductList
+        productData={allData.categories.find(
+          (item) => item.category === "Bedrooms",
+        )}
+      />
+      <ProductList
+        productData={allData.categories.find(
+          (item) => item.category === "Office",
+        )}
+      />
     </>
   );
 };
