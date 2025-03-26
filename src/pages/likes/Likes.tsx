@@ -1,10 +1,11 @@
-import { AllProducts } from "@/components/ui/AllProducts";
+import { AllProducts } from "@/components/ui";
 import { LikedProducts } from "@/components/ui/LikedProducts";
+import { Title } from "./Likes.styles";
 
 const LikedPage = () => {
   return (
     <div>
-      <h1>Products & Liked Items</h1>
+      <Title>Liked Products & All Products</Title>
       <LikedProducts />
       <AllProducts />
     </div>
