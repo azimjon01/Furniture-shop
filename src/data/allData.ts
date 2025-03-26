@@ -10,6 +10,6 @@ export const allData = {
   tables: tableData,
   sofas: sofaData,
   livingRoom: livingRoomData,
-  bedroomData: bedroomData,
-  officeData: officeData,
+  bedroom: bedroomData,
+  office: officeData,
 };
