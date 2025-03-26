@@ -1,5 +1,12 @@
+import { ProductList } from "@/components/ui";
+import { officeData } from "./data";
+
 const Office = () => {
-  return <h1>Office</h1>;
+  return (
+    <>
+      <ProductList productData={officeData} />
+    </>
+  );
 };
 
 export default Office;
