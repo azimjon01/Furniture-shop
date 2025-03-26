@@ -8,6 +8,7 @@ import {
   Chairs,
   Home,
   Inspirations,
+  Likes,
   LivingRoom,
   NotFound,
   Office,
@@ -101,6 +102,30 @@ const AppRoutes = () => {
             element={
               <Layout>
                 <Inspirations />
+              </Layout>
+            }
+          />
+          <Route
+            path="/likes"
+            element={
+              <Layout>
+                <Likes />
+              </Layout>
+            }
+          />
+          <Route
+            path="/products"
+            element={
+              <Layout>
+                <Likes />
+              </Layout>
+            }
+          />
+          <Route
+            path="/profile"
+            element={
+              <Layout>
+                <Likes />
               </Layout>
             }
           />
