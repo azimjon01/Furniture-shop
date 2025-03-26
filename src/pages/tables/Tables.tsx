@@ -1,10 +1,14 @@
 import { ProductList } from "@/components/ui";
-import { tableData } from "./data";
+import { allData } from "@/data/allData";
 
 const Tables = () => {
   return (
     <>
-      <ProductList productData={tableData} />
+      <ProductList
+        productData={allData.categories.find(
+          (item) => item.category === "Tables",
+        )}
+      />
     </>
   );
 };

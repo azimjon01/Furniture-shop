@@ -6,8 +6,8 @@ const LikedPage = () => {
   return (
     <div>
       <Title>Liked Products & All Products</Title>
-      <LikedProducts />
-      <AllProducts />
+      {/* <LikedProducts /> */}
+      {/* <AllProducts /> */}
     </div>
   );
 };

@@ -10,6 +10,7 @@ import { Product } from "./type";
 
 interface ProductListProps {
   productData?: {
+    category: string;
     bigTitle: string;
     products: Product[];
   };

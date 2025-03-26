@@ -1,10 +1,14 @@
 import { ProductList } from "@/components/ui";
-import { chairData } from "./data";
+import { allData } from "@/data/allData";
 
 const Chairs = () => {
   return (
     <>
-      <ProductList productData={chairData} />
+      <ProductList
+        productData={allData.categories.find(
+          (item) => item.category === "Chairs",
+        )}
+      />
     </>
   );
 };

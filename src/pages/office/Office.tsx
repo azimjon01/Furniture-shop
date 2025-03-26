@@ -1,10 +1,14 @@
 import { ProductList } from "@/components/ui";
-import { officeData } from "./data";
+import { allData } from "@/data/allData";
 
 const Office = () => {
   return (
     <>
-      <ProductList productData={officeData} />
+      <ProductList
+        productData={allData.categories.find(
+          (item) => item.category === "Office",
+        )}
+      />
     </>
   );
 };
