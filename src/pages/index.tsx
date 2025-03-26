@@ -9,3 +9,4 @@ export { default as Sofas } from "./sofas";
 export { default as LivingRoom } from "./living-room";
 export { default as Badroom } from "./badroom";
 export { default as Office } from "./office";
+export { default as Inspirations } from "./inspirations";
