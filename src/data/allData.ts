@@ -1,19 +1,3 @@
-// import { bedroomData } from "@/pages/badroom/data";
-// import { chairData } from "@/pages/chairs/data";
-// import { livingRoomData } from "@/pages/living-room/data";
-// import { officeData } from "@/pages/office/data";
-// import { sofaData } from "@/pages/sofas/data";
-// import { tableData } from "@/pages/tables/data";
-
-// export const allData = {
-//   chairs: chairData,
-//   tables: tableData,
-//   sofas: sofaData,
-//   livingRoom: livingRoomData,
-//   bedroom: bedroomData,
-//   office: officeData,
-// };
-
 export const allData = {
   categories: [
     {
@@ -152,7 +136,7 @@ export const allData = {
       bigTitle: "Our Tables",
       products: [
         {
-          id: 1,
+          id: 17,
           image: "/assets/images/tables/tables-one.jpeg",
           title: "Classic Wooden Table",
           description: "High-quality oak wood table with a smooth finish.",
@@ -162,14 +146,14 @@ export const allData = {
           isNew: true,
         },
         {
-          id: 2,
+          id: 18,
           image: "/assets/images/tables/tables-two.jpeg",
           title: "Modern Glass Table",
           description: "Stylish tempered glass table with a metal frame.",
           price: "$320",
         },
         {
-          id: 3,
+          id: 19,
           image: "/assets/images/tables/tables-three.jpeg",
           title: "Round Dining Table",
           description: "Elegant round dining table made of walnut wood.",
@@ -178,21 +162,21 @@ export const allData = {
           discount: "10%",
         },
         {
-          id: 4,
+          id: 20,
           image: "/assets/images/tables/tables-four.jpeg",
           title: "Folding Study Table",
           description: "Compact and foldable study table made of pine wood.",
           price: "$180",
         },
         {
-          id: 5,
+          id: 21,
           image: "/assets/images/tables/tables-five.jpeg",
           title: "Metal Frame Office Table",
           description: "Durable office table with a metal frame and MDF top.",
           price: "$280",
         },
         {
-          id: 6,
+          id: 22,
           image: "/assets/images/tables/tables-six.jpeg",
           title: "Rustic Farmhouse Table",
           description:
@@ -202,21 +186,21 @@ export const allData = {
           discount: "10%",
         },
         {
-          id: 7,
+          id: 23,
           image: "/assets/images/tables/tables-seven.jpeg",
           title: "White Minimal Table",
           description: "Simple and modern white minimalistic table.",
           price: "$230",
         },
         {
-          id: 8,
+          id: 24,
           image: "/assets/images/tables/tables-eight.jpeg",
           title: "Vintage Coffee Table",
           description: "A stylish vintage coffee table with intricate designs.",
           price: "$190",
         },
         {
-          id: 9,
+          id: 25,
           image: "/assets/images/tables/tables-one.jpeg",
           title: "Adjustable Height Table",
           description: "Ergonomic height-adjustable office table.",
@@ -225,28 +209,28 @@ export const allData = {
           discount: "12%",
         },
         {
-          id: 10,
+          id: 26,
           image: "/assets/images/tables/tables-two.jpeg",
           title: "Marble Top Table",
           description: "Luxurious marble top dining table with metal legs.",
           price: "$600",
         },
         {
-          id: 11,
+          id: 27,
           image: "/assets/images/tables/tables-three.jpeg",
           title: "Kids Study Table",
           description: "Colorful and functional study table for kids.",
           price: "$120",
         },
         {
-          id: 12,
+          id: 28,
           image: "/assets/images/tables/tables-four.jpeg",
           title: "Portable Laptop Table",
           description: "Lightweight and foldable laptop table for easy use.",
           price: "$90",
         },
         {
-          id: 13,
+          id: 29,
           image: "/assets/images/tables/tables-five.jpeg",
           title: "Industrial Work Table",
           description: "Heavy-duty industrial work table with steel frame.",
@@ -255,14 +239,14 @@ export const allData = {
           discount: "9%",
         },
         {
-          id: 14,
+          id: 30,
           image: "/assets/images/tables/tables-six.jpeg",
           title: "Teakwood Dining Table",
           description: "Elegant dining table made of premium teakwood.",
           price: "$700",
         },
         {
-          id: 15,
+          id: 31,
           image: "/assets/images/tables/tables-seven.jpeg",
           title: "Convertible Desk Table",
           description:
@@ -272,7 +256,7 @@ export const allData = {
           discount: "11%",
         },
         {
-          id: 16,
+          id: 32,
           image: "/assets/images/tables/tables-eight.jpeg",
           title: "Glass Coffee Table",
           description: "Modern glass coffee table with wooden legs.",
@@ -285,7 +269,7 @@ export const allData = {
       bigTitle: "Our Sofas",
       products: [
         {
-          id: 1,
+          id: 33,
           image: "/assets/images/sofas/sofa-one.jpeg",
           title: "Classic Leather Sofa",
           description: "Premium quality leather sofa with a modern touch.",
@@ -295,14 +279,14 @@ export const allData = {
           isNew: true,
         },
         {
-          id: 2,
+          id: 34,
           image: "/assets/images/sofas/sofa-two.jpeg",
           title: "Modern Fabric Sofa",
           description: "Comfortable fabric sofa with a stylish design.",
           price: "$950",
         },
         {
-          id: 3,
+          id: 35,
           image: "/assets/images/sofas/sofa-three.jpeg",
           title: "L-Shaped Corner Sofa",
           description: "Spacious L-shaped corner sofa for maximum comfort.",
@@ -311,21 +295,21 @@ export const allData = {
           discount: "10%",
         },
         {
-          id: 4,
+          id: 36,
           image: "/assets/images/sofas/sofa-four.jpeg",
           title: "Recliner Sofa",
           description: "Luxury recliner sofa with adjustable positions.",
           price: "$1400",
         },
         {
-          id: 5,
+          id: 37,
           image: "/assets/images/sofas/sofa-five.jpeg",
           title: "Velvet Chesterfield Sofa",
           description: "Elegant velvet Chesterfield sofa with deep buttoning.",
           price: "$1600",
         },
         {
-          id: 6,
+          id: 38,
           image: "/assets/images/sofas/sofa-six.jpeg",
           title: "Minimalist Grey Sofa",
           description: "A simple yet modern grey fabric sofa.",
@@ -334,21 +318,21 @@ export const allData = {
           discount: "16%",
         },
         {
-          id: 7,
+          id: 39,
           image: "/assets/images/sofas/sofa-seven.jpeg",
           title: "Wooden Frame Sofa",
           description: "Rustic wooden frame sofa with soft cushions.",
           price: "$1300",
         },
         {
-          id: 8,
+          id: 40,
           image: "/assets/images/sofas/sofa-eight.jpeg",
           title: "Luxury Sectional Sofa",
           description: "High-end sectional sofa with premium cushioning.",
           price: "$2500",
         },
         {
-          id: 9,
+          id: 41,
           image: "/assets/images/sofas/sofa-one.jpeg",
           title: "Convertible Sofa Bed",
           description: "Space-saving sofa that transforms into a bed.",
@@ -357,28 +341,28 @@ export const allData = {
           discount: "15%",
         },
         {
-          id: 10,
+          id: 42,
           image: "/assets/images/sofas/sofa-two.jpeg",
           title: "Scandinavian Sofa",
           description: "Minimalist Scandinavian-style fabric sofa.",
           price: "$900",
         },
         {
-          id: 11,
+          id: 43,
           image: "/assets/images/sofas/sofa-three.jpeg",
           title: "Tufted Velvet Sofa",
           description: "Luxurious tufted velvet sofa with gold legs.",
           price: "$1700",
         },
         {
-          id: 12,
+          id: 44,
           image: "/assets/images/sofas/sofa-four.jpeg",
           title: "Compact Apartment Sofa",
           description: "Perfectly designed compact sofa for small spaces.",
           price: "$850",
         },
         {
-          id: 13,
+          id: 45,
           image: "/assets/images/sofas/sofa-five.jpeg",
           title: "Industrial Leather Sofa",
           description: "Vintage-style industrial leather sofa.",
@@ -387,14 +371,14 @@ export const allData = {
           discount: "9%",
         },
         {
-          id: 14,
+          id: 46,
           image: "/assets/images/sofas/sofa-six.jpeg",
           title: "Handcrafted Wooden Sofa",
           description: "Handmade wooden sofa with durable fabric.",
           price: "$1450",
         },
         {
-          id: 15,
+          id: 47,
           image: "/assets/images/sofas/sofa-seven.jpeg",
           title: "Futon Sleeper Sofa",
           description:
@@ -404,7 +388,7 @@ export const allData = {
           discount: "13%",
         },
         {
-          id: 16,
+          id: 48,
           image: "/assets/images/sofas/sofa-eight.jpeg",
           title: "Bohemian Style Sofa",
           description: "Cozy bohemian-style sofa with colorful patterns.",
@@ -417,7 +401,7 @@ export const allData = {
       bigTitle: "Living Room Collection",
       products: [
         {
-          id: 1,
+          id: 49,
           image: "/assets/images/living-room/living-room-one.jpeg",
           title: "Modern Sofa Set",
           description: "Luxurious modern sofa set for a stylish living room.",
@@ -427,14 +411,14 @@ export const allData = {
           isNew: true,
         },
         {
-          id: 2,
+          id: 50,
           image: "/assets/images/living-room/living-room-two.jpeg",
           title: "Contemporary Coffee Table",
           description: "Sleek coffee table with a minimalistic design.",
           price: "$450",
         },
         {
-          id: 3,
+          id: 51,
           image: "/assets/images/living-room/living-room-three.jpeg",
           title: "Elegant TV Stand",
           description: "Spacious and stylish TV stand with storage.",
@@ -443,21 +427,21 @@ export const allData = {
           discount: "14%",
         },
         {
-          id: 4,
+          id: 52,
           image: "/assets/images/living-room/living-room-four.jpeg",
           title: "Recliner Lounge Chair",
           description: "Comfortable recliner chair for relaxation.",
           price: "$750",
         },
         {
-          id: 5,
+          id: 53,
           image: "/assets/images/living-room/living-room-five.jpeg",
           title: "Wooden Bookshelf",
           description: "Handcrafted wooden bookshelf for storage and decor.",
           price: "$900",
         },
         {
-          id: 6,
+          id: 54,
           image: "/assets/images/living-room/living-room-six.jpeg",
           title: "Minimalist Floor Lamp",
           description: "Modern floor lamp for a cozy ambiance.",
@@ -466,21 +450,21 @@ export const allData = {
           discount: "20%",
         },
         {
-          id: 7,
+          id: 55,
           image: "/assets/images/living-room/living-room-seven.jpeg",
           title: "Rustic Coffee Table Set",
           description: "A set of two rustic wooden coffee tables.",
           price: "$580",
         },
         {
-          id: 8,
+          id: 56,
           image: "/assets/images/living-room/living-room-eight.jpeg",
           title: "Luxury Sectional Sofa",
           description: "Premium sectional sofa for maximum comfort.",
           price: "$3200",
         },
         {
-          id: 9,
+          id: 57,
           image: "/assets/images/living-room/living-room-one.jpeg",
           title: "Convertible Sofa Bed",
           description: "Space-saving sofa that transforms into a bed.",
@@ -489,28 +473,28 @@ export const allData = {
           discount: "13%",
         },
         {
-          id: 10,
+          id: 58,
           image: "/assets/images/living-room/living-room-two.jpeg",
           title: "Scandinavian Armchair",
           description: "Minimalist Scandinavian-style fabric armchair.",
           price: "$450",
         },
         {
-          id: 11,
+          id: 59,
           image: "/assets/images/living-room/living-room-three.jpeg",
           title: "Velvet Accent Chair",
           description: "Luxurious velvet accent chair with gold legs.",
           price: "$650",
         },
         {
-          id: 12,
+          id: 60,
           image: "/assets/images/living-room/living-room-four.jpeg",
           title: "Compact Side Table",
           description: "Perfectly designed side table for small spaces.",
           price: "$180",
         },
         {
-          id: 13,
+          id: 61,
           image: "/assets/images/living-room/living-room-five.jpeg",
           title: "Vintage Wooden Cabinet",
           description: "Industrial-style wooden storage cabinet.",
@@ -519,14 +503,14 @@ export const allData = {
           discount: "12%",
         },
         {
-          id: 14,
+          id: 62,
           image: "/assets/images/living-room/living-room-six.jpeg",
           title: "Handcrafted Coffee Table",
           description: "Handmade wooden coffee table with a modern look.",
           price: "$500",
         },
         {
-          id: 15,
+          id: 63,
           image: "/assets/images/living-room/living-room-seven.jpeg",
           title: "Foldable Lounge Chair",
           description: "Stylish and foldable lounge chair for easy storage.",
@@ -535,7 +519,7 @@ export const allData = {
           discount: "13%",
         },
         {
-          id: 16,
+          id: 64,
           image: "/assets/images/living-room/living-room-eight.jpeg",
           title: "Bohemian Style Rug",
           description: "Cozy bohemian-style rug with colorful patterns.",
@@ -548,7 +532,7 @@ export const allData = {
       bigTitle: "Bedroom Collection",
       products: [
         {
-          id: 1,
+          id: 65,
           image: "/assets/images/bedroom/bedroom-one.jpeg",
           title: "Luxury King Bed",
           description: "Elegant king-size bed with premium comfort.",
@@ -558,14 +542,14 @@ export const allData = {
           isNew: true,
         },
         {
-          id: 2,
+          id: 66,
           image: "/assets/images/bedroom/bedroom-two.jpeg",
           title: "Modern Nightstand",
           description: "Minimalist nightstand with storage drawers.",
           price: "$320",
         },
         {
-          id: 3,
+          id: 67,
           image: "/assets/images/bedroom/bedroom-three.jpeg",
           title: "Spacious Wardrobe",
           description: "Stylish wardrobe with ample storage capacity.",
@@ -574,21 +558,21 @@ export const allData = {
           discount: "10%",
         },
         {
-          id: 4,
+          id: 68,
           image: "/assets/images/bedroom/bedroom-four.jpeg",
           title: "Comfortable Mattress",
           description: "Premium quality mattress for restful sleep.",
           price: "$900",
         },
         {
-          id: 5,
+          id: 69,
           image: "/assets/images/bedroom/bedroom-five.jpeg",
           title: "Wooden Dresser",
           description: "Classic wooden dresser with multiple drawers.",
           price: "$750",
         },
         {
-          id: 6,
+          id: 70,
           image: "/assets/images/bedroom/bedroom-six.jpeg",
           title: "Soft Bedside Lamp",
           description: "Warm and cozy bedside lamp for night reading.",
@@ -597,21 +581,21 @@ export const allData = {
           discount: "17%",
         },
         {
-          id: 7,
+          id: 71,
           image: "/assets/images/bedroom/bedroom-seven.jpeg",
           title: "Minimalist Vanity Table",
           description: "Stylish vanity table with mirror and drawers.",
           price: "$680",
         },
         {
-          id: 8,
+          id: 72,
           image: "/assets/images/bedroom/bedroom-eight.jpeg",
           title: "Elegant Bedding Set",
           description: "Soft and comfortable bedding set with pillows.",
           price: "$350",
         },
         {
-          id: 9,
+          id: 73,
           image: "/assets/images/bedroom/bedroom-one.jpeg",
           title: "Convertible Sofa Bed",
           description: "Space-saving sofa that turns into a bed.",
@@ -620,28 +604,28 @@ export const allData = {
           discount: "14%",
         },
         {
-          id: 10,
+          id: 74,
           image: "/assets/images/bedroom/bedroom-two.jpeg",
           title: "Scandinavian Bed Frame",
           description: "Minimalist wooden bed frame with sturdy support.",
           price: "$1100",
         },
         {
-          id: 11,
+          id: 75,
           image: "/assets/images/bedroom/bedroom-three.jpeg",
           title: "Tufted Headboard",
           description: "Elegant tufted headboard for a luxurious look.",
           price: "$550",
         },
         {
-          id: 12,
+          id: 76,
           image: "/assets/images/bedroom/bedroom-four.jpeg",
           title: "Compact Storage Bench",
           description: "Perfect storage bench for extra bedroom space.",
           price: "$280",
         },
         {
-          id: 13,
+          id: 77,
           image: "/assets/images/bedroom/bedroom-five.jpeg",
           title: "Rustic Wooden Nightstand",
           description: "Handcrafted wooden nightstand with storage.",
@@ -650,14 +634,14 @@ export const allData = {
           discount: "10%",
         },
         {
-          id: 14,
+          id: 78,
           image: "/assets/images/bedroom/bedroom-six.jpeg",
           title: "Handcrafted Bed Frame",
           description: "Solid wood bed frame with a natural finish.",
           price: "$1400",
         },
         {
-          id: 15,
+          id: 79,
           image: "/assets/images/bedroom/bedroom-seven.jpeg",
           title: "Foldable Storage Ottoman",
           description: "Multipurpose ottoman with hidden storage.",
@@ -666,7 +650,7 @@ export const allData = {
           discount: "16%",
         },
         {
-          id: 16,
+          id: 80,
           image: "/assets/images/bedroom/bedroom-eight.jpeg",
           title: "Bohemian Style Blanket",
           description: "Cozy bohemian-style blanket with soft texture.",
@@ -679,7 +663,7 @@ export const allData = {
       bigTitle: "Office Collection",
       products: [
         {
-          id: 1,
+          id: 81,
           image: "/assets/images/office/office-one.jpeg",
           title: "Ergonomic Office Chair",
           description: "Comfortable ergonomic chair for long working hours.",
@@ -689,14 +673,14 @@ export const allData = {
           isNew: true,
         },
         {
-          id: 2,
+          id: 82,
           image: "/assets/images/office/office-two.jpeg",
           title: "Modern Office Desk",
           description: "Spacious office desk with sleek design.",
           price: "$800",
         },
         {
-          id: 3,
+          id: 83,
           image: "/assets/images/office/office-three.jpeg",
           title: "Bookshelf with Storage",
           description: "Stylish bookshelf with multiple compartments.",
@@ -705,21 +689,21 @@ export const allData = {
           discount: "14%",
         },
         {
-          id: 4,
+          id: 84,
           image: "/assets/images/office/office-four.jpeg",
           title: "Adjustable Standing Desk",
           description: "Height-adjustable desk for a comfortable workspace.",
           price: "$1200",
         },
         {
-          id: 5,
+          id: 85,
           image: "/assets/images/office/office-five.jpeg",
           title: "Filing Cabinet",
           description: "Secure and spacious filing cabinet for documents.",
           price: "$500",
         },
         {
-          id: 6,
+          id: 86,
           image: "/assets/images/office/office-six.jpeg",
           title: "LED Desk Lamp",
           description:
@@ -729,21 +713,21 @@ export const allData = {
           discount: "17%",
         },
         {
-          id: 7,
+          id: 87,
           image: "/assets/images/office/office-seven.jpeg",
           title: "Minimalist Office Table",
           description: "Sleek and functional office table for workstations.",
           price: "$750",
         },
         {
-          id: 8,
+          id: 88,
           image: "/assets/images/office/office-eight.jpeg",
           title: "Executive Office Chair",
           description: "Luxury office chair with high-back support.",
           price: "$900",
         },
         {
-          id: 9,
+          id: 89,
           image: "/assets/images/office/office-one.jpeg",
           title: "Multipurpose Workstation",
           description: "All-in-one workstation with ample storage.",
@@ -752,28 +736,28 @@ export const allData = {
           discount: "12%",
         },
         {
-          id: 10,
+          id: 90,
           image: "/assets/images/office/office-two.jpeg",
           title: "Compact Office Desk",
           description: "Space-saving office desk for small spaces.",
           price: "$650",
         },
         {
-          id: 11,
+          id: 91,
           image: "/assets/images/office/office-three.jpeg",
           title: "Whiteboard with Stand",
           description: "Portable whiteboard for meetings and brainstorming.",
           price: "$300",
         },
         {
-          id: 12,
+          id: 92,
           image: "/assets/images/office/office-four.jpeg",
           title: "Storage Credenza",
           description: "Modern credenza for office storage and decor.",
           price: "$850",
         },
         {
-          id: 13,
+          id: 93,
           image: "/assets/images/office/office-five.jpeg",
           title: "Ergonomic Footrest",
           description: "Adjustable footrest for better posture support.",
@@ -782,14 +766,14 @@ export const allData = {
           discount: "20%",
         },
         {
-          id: 14,
+          id: 94,
           image: "/assets/images/office/office-six.jpeg",
           title: "Conference Table",
           description: "Spacious conference table for meetings.",
           price: "$2000",
         },
         {
-          id: 15,
+          id: 95,
           image: "/assets/images/office/office-seven.jpeg",
           title: "Under-Desk Drawer Unit",
           description: "Compact drawer unit for office supplies.",
@@ -798,7 +782,7 @@ export const allData = {
           discount: "13%",
         },
         {
-          id: 16,
+          id: 96,
           image: "/assets/images/office/office-eight.jpeg",
           title: "Acoustic Office Panels",
           description: "Sound-absorbing panels for a quieter workspace.",
@@ -808,3 +792,19 @@ export const allData = {
     },
   ],
 };
+
+// import { bedroomData } from "@/pages/badroom/data";
+// import { chairData } from "@/pages/chairs/data";
+// import { livingRoomData } from "@/pages/living-room/data";
+// import { officeData } from "@/pages/office/data";
+// import { sofaData } from "@/pages/sofas/data";
+// import { tableData } from "@/pages/tables/data";
+
+// export const allData = {
+//   chairs: chairData,
+//   tables: tableData,
+//   sofas: sofaData,
+//   livingRoom: livingRoomData,
+//   bedroom: bedroomData,
+//   office: officeData,
+// };
