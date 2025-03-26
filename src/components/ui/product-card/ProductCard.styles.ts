@@ -120,7 +120,7 @@ const DiscountBadge = styled.span({
   alignItems: "center",
   top: "22.76px",
   right: "22.76px",
-  background: "#E97171",
+  // background: "#E97171",
   color: "#fff",
   padding: "4px 8px",
   borderRadius: "50%",
