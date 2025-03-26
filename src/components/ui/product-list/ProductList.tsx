@@ -9,28 +9,37 @@ import ProductCard from "../product-card";
 import { Product } from "./type";
 
 interface ProductListProps {
-  productData?: Product[];
+  productData?: {
+    bigTitle: string;
+    products: Product[];
+  };
 }
 
-const ProductList: React.FC<ProductListProps> = ({ productData = [] }) => {
+const ProductList: React.FC<ProductListProps> = ({ productData }) => {
   const [visibleProducts, setVisibleProducts] = useState(8);
 
-  if (!Array.isArray(productData) || productData.length === 0) {
+  if (
+    !productData ||
+    !Array.isArray(productData.products) ||
+    productData.products.length === 0
+  ) {
     return <p>Mahsulotlar yo'q</p>;
   }
 
   return (
     <BigConatiner>
-      <ProductsTitle>Our Products</ProductsTitle>
+      <ProductsTitle>{productData.bigTitle}</ProductsTitle>
       <Grid>
-        {productData.slice(0, visibleProducts).map((product) => (
+        {productData.products.slice(0, visibleProducts).map((product) => (
           <ProductCard key={product.id} {...product} />
         ))}
       </Grid>
-      {visibleProducts < productData.length && (
+      {visibleProducts < productData.products.length && (
         <ShowMore
           onClick={() =>
-            setVisibleProducts((prev) => Math.min(prev + 8, productData.length))
+            setVisibleProducts((prev) =>
+              Math.min(prev + 8, productData.products.length),
+            )
           }
         >
           Show More
