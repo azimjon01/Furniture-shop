@@ -136,7 +136,7 @@ const NewBadge = styled.span({
 const InformationCard = styled.div({
   width: "100%",
   height: "100%",
-  background: "#F4F5F7",
+  background: "#fff",
   padding: "15px",
 });
 
@@ -149,11 +149,7 @@ const Information = styled.div({
   alignItems: "start",
 });
 
-const Info = styled.div({
-  // background: "red",
-  // width: "76.84px",
-  // height: "57.84px",
-});
+const Info = styled.div({});
 
 const Title = styled.h3({
   color: "#3A3A3A",
