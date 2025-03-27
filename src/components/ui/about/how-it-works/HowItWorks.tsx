@@ -46,7 +46,6 @@ const HowItWorks: React.FC = () => {
             <ImageWrapper>
               <Image src={step.image} alt={step.title} />
             </ImageWrapper>
-            <StepNumber>{step.id}.</StepNumber>
             <Label>{step.title}</Label>
             <Text>{step.text}</Text>
           </Card>

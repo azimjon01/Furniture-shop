@@ -31,7 +31,7 @@ export const Card = styled.div`
 export const ImageWrapper = styled.div`
   border-radius: 15px;
   overflow: hidden;
-  height: 220px;
+  height: 310px;
 `;
 
 export const Image = styled.img`
@@ -39,20 +39,6 @@ export const Image = styled.img`
   height: 100%;
   object-fit: cover;
   border-radius: 15px;
-`;
-
-export const StepNumber = styled.div`
-  width: 40px;
-  height: 40px;
-  background-color: black;
-  color: white;
-  font-size: 16px;
-  font-weight: bold;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  margin: 12px auto;
 `;
 
 export const Label = styled.p`

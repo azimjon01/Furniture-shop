@@ -54,6 +54,7 @@ export const FeatureContainer = styled.div`
   background: #f4f6f8;
   padding: 20px 40px;
   border-radius: 10px;
+  margin-top: 50px;
 `;
 
 export const FeatureItemWrapper = styled.div`
@@ -65,12 +66,14 @@ export const FeatureItemWrapper = styled.div`
 `;
 
 export const IconWrapper = styled.div`
+  cursor: pointer;
   font-size: 24px;
 `;
 
 export const FeatureText = styled.div`
   display: flex;
   flex-direction: column;
+  cursor: pointer;
 `;
 
 export const FeatureTitle = styled.h3`

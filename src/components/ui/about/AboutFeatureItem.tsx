@@ -6,6 +6,7 @@ import {
   FeatureTitle,
   FeatureDescription,
 } from "./About.styles";
+import { Link } from "react-router-dom";
 
 type FeatureItemProps = {
   icon: React.ReactNode;
@@ -20,11 +21,13 @@ const FeatureItem: React.FC<FeatureItemProps> = ({
 }) => {
   return (
     <FeatureItemWrapper>
-      <IconWrapper>{icon}</IconWrapper>
-      <FeatureText>
-        <FeatureTitle>{title}</FeatureTitle>
-        <FeatureDescription>{description}</FeatureDescription>
-      </FeatureText>
+      <Link to={"/about"}>
+        <IconWrapper>{icon}</IconWrapper>
+        <FeatureText>
+          <FeatureTitle>{title}</FeatureTitle>
+          <FeatureDescription>{description}</FeatureDescription>
+        </FeatureText>
+      </Link>
     </FeatureItemWrapper>
   );
 };

@@ -53,8 +53,8 @@ export const BackgroundCircle = styled.div`
   height: 120px;
   background-color: #16543a;
   border-radius: 50%;
-  right: -40px;
-  top: 50%;
+  right: 400px;
+  bottom: -60px;
   transform: translateY(-50%);
 `;
 
