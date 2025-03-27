@@ -1,17 +1,19 @@
-import CTA from "@/components/ui/about/CTA";
-import Features from "@/components/ui/about/Features";
+import AboutFeature from "@/components/ui/about/AboutFeature";
+import AboutInspiration from "@/components/ui/about/about-inspirations/AboutInspiration";
 import Hero from "@/components/ui/about/Hero";
-import Mission from "@/components/ui/about/Mission";
-import Team from "@/components/ui/about/Team";
+import Beautify from "@/components/ui/about/beautify/Beautify";
+import Browse from "@/components/ui/about/browse/Browse";
+import HowItWorks from "@/components/ui/about/how-it-works/HowItWorks";
 
 const About = () => {
   return (
     <>
       <Hero />
-      <Mission />
-      <Features />
-      <Team />
-      <CTA />
+      <AboutFeature />
+      <AboutInspiration />
+      <Beautify />
+      <Browse />
+      <HowItWorks />
     </>
   );
 };
