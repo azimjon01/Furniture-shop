@@ -18,6 +18,7 @@ import {
   Sofas,
   Tables,
 } from "@/pages";
+import SearchPage from "@/pages/search-page/SearchPage";
 
 const AppRoutes = () => {
   return (
@@ -128,6 +129,14 @@ const AppRoutes = () => {
             element={
               <Layout>
                 <ProfilePage />
+              </Layout>
+            }
+          />
+          <Route
+            path="/search"
+            element={
+              <Layout>
+                <SearchPage />
               </Layout>
             }
           />
