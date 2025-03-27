@@ -12,6 +12,7 @@ import {
   LivingRoom,
   NotFound,
   Office,
+  Products,
   Shop,
   Sofas,
   Tables,
@@ -117,7 +118,7 @@ const AppRoutes = () => {
             path="/products"
             element={
               <Layout>
-                <Likes />
+                <Products />
               </Layout>
             }
           />
