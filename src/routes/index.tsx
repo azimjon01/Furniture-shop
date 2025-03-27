@@ -13,6 +13,7 @@ import {
   NotFound,
   Office,
   Products,
+  ProfilePage,
   Shop,
   Sofas,
   Tables,
@@ -126,7 +127,7 @@ const AppRoutes = () => {
             path="/profile"
             element={
               <Layout>
-                <Likes />
+                <ProfilePage />
               </Layout>
             }
           />
