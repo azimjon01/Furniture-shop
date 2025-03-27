@@ -790,21 +790,143 @@ export const allData = {
         },
       ],
     },
+    {
+      category: "OurProducts",
+      bigTitle: "Our Products",
+      products: [
+        {
+          id: 97,
+          image: "/assets/images/product-list-image/productsOne.png",
+          title: "Syltherine",
+          description: "Stylish cafe chair",
+          price: 2500000,
+          oldPrice: 3500000,
+          discount: "30%",
+        },
+        {
+          id: 98,
+          image: "/assets/images/product-list-image/productsTwo.png",
+          title: "Leviosa",
+          description: "Stylish cafe chair", // ✅ "cofe" → "cafe"
+          price: 2500000,
+          isNew: false, // ✅ Qo‘shildi
+        },
+        {
+          id: 99,
+          image: "/assets/images/product-list-image/productsThree.png",
+          title: "Lolito",
+          description: "Luxury big sofa",
+          price: 7000000,
+          oldPrice: 14000000,
+          discount: "50%",
+        },
+        {
+          id: 100,
+          image: "/assets/images/product-list-image/productsFour.png",
+          title: "Respira",
+          description: "Minimalist fan",
+          price: 500000,
+          isNew: true,
+        },
+        {
+          id: 101,
+          image: "/assets/images/product-list-image/productsFive.png",
+          title: "Grifo",
+          description: "Night lamp",
+          price: 7000000,
+        },
+        {
+          id: 102,
+          image: "/assets/images/product-list-image/productsSix.png",
+          title: "Muggo",
+          description: "Small mug",
+          price: 150000,
+          isNew: true,
+        },
+        {
+          id: 103,
+          image: "/assets/images/product-list-image/productsSeven.png",
+          title: "Muggo",
+          description: "Small mug",
+          price: 150000,
+          isNew: true,
+        },
+        {
+          id: 104,
+          image: "/assets/images/product-list-image/productsEight.png",
+          title: "Pingky",
+          description: "Cute bed set",
+          price: 7000000,
+          oldPrice: 14000000,
+          discount: "50%",
+        },
+        {
+          id: 105,
+          image: "/assets/images/product-list-image/productsOne.png",
+          title: "Syltherine",
+          description: "Stylish cafe chair",
+          price: 2500000,
+          oldPrice: 3500000,
+          discount: "30%",
+        },
+        {
+          id: 106,
+          image: "/assets/images/product-list-image/productsTwo.png",
+          title: "Leviosa",
+          description: "Stylish cafe chair", // ✅ "cofe" → "cafe"
+          price: 2500000,
+          isNew: false, // ✅ Qo‘shildi
+        },
+        {
+          id: 107,
+          image: "/assets/images/product-list-image/productsThree.png",
+          title: "Lolito",
+          description: "Luxury big sofa",
+          price: 7000000,
+          oldPrice: 14000000,
+          discount: "50%",
+        },
+        {
+          id: 108,
+          image: "/assets/images/product-list-image/productsFour.png",
+          title: "Respira",
+          description: "Minimalist fan",
+          price: 500000,
+          isNew: true,
+        },
+        {
+          id: 109,
+          image: "/assets/images/product-list-image/productsFive.png",
+          title: "Grifo",
+          description: "Night lamp",
+          price: 7000000,
+        },
+        {
+          id: 110,
+          image: "/assets/images/product-list-image/productsSix.png",
+          title: "Muggo",
+          description: "Small mug",
+          price: 150000,
+          isNew: true,
+        },
+        {
+          id: 111,
+          image: "/assets/images/product-list-image/productsSeven.png",
+          title: "Muggo",
+          description: "Small mug",
+          price: 150000,
+          isNew: true,
+        },
+        {
+          id: 112,
+          image: "/assets/images/product-list-image/productsEight.png",
+          title: "Pingky",
+          description: "Cute bed set",
+          price: 7000000,
+          oldPrice: 14000000,
+          discount: "50%",
+        },
+      ],
+    },
   ],
 };
-
-// import { bedroomData } from "@/pages/badroom/data";
-// import { chairData } from "@/pages/chairs/data";
-// import { livingRoomData } from "@/pages/living-room/data";
-// import { officeData } from "@/pages/office/data";
-// import { sofaData } from "@/pages/sofas/data";
-// import { tableData } from "@/pages/tables/data";
-
-// export const allData = {
-//   chairs: chairData,
-//   tables: tableData,
-//   sofas: sofaData,
-//   livingRoom: livingRoomData,
-//   bedroom: bedroomData,
-//   office: officeData,
-// };
