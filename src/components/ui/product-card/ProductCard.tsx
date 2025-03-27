@@ -27,7 +27,8 @@ import {
   Title,
 } from "./ProductCard.styles";
 import { useCartStore } from "@/components/store/useLikesStore";
-import React from "react";
+import React, { useState } from "react";
+import ShareModal from "../share-modal/ShareModal";
 
 const ProductCard: React.FC<
   ProductCardProps & { children?: React.ReactNode }
@@ -42,10 +43,10 @@ const ProductCard: React.FC<
   isNew,
   children,
 }) => {
-  // const [isLiked, SetIsLiked] = useState(false);
   const { likedItems, toggleLike } = useCartStore();
   const isLiked = likedItems.includes(id);
   const { addToCart } = useCartStore();
+  const [isShareModalOpen, setIsShareModalOpen] = useState(false);
   return (
     <Card>
       <Image src={image} alt={title} />
@@ -71,7 +72,7 @@ const ProductCard: React.FC<
             Add to cart
           </Button>
           <InformationContainer>
-            <ShareContainer>
+            <ShareContainer onClick={() => setIsShareModalOpen(true)}>
               <ShareIcon src={share} alt="Share Icon" />
               <ShareText>Share</ShareText>
             </ShareContainer>
@@ -98,6 +99,10 @@ const ProductCard: React.FC<
           </Price>
         </Information>
       </InformationCard>
+      <ShareModal
+        isOpen={isShareModalOpen}
+        onClose={() => setIsShareModalOpen(false)}
+      />
     </Card>
   );
 };
