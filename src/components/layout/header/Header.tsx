@@ -1,11 +1,9 @@
 import searchIcon from "../../../assets/icons/search-icon.svg";
 import cartIcon from "../../../assets/icons/cart-icon.svg";
 import heartIcon from "../../../assets/icons/heart-icon.svg";
-import avatar from "../../../assets/images/avatar.png";
 
 import {
   Avatar,
-  CartLink,
   HeaderWrapper,
   HeaderWrapperContainer,
   Icon,
@@ -73,7 +71,7 @@ const Header = () => {
           {totalItems > 0 && <ToTalIcon>+{totalItems}</ToTalIcon>}
         </NavLink>
         <NavLink to="/profile">
-          <Avatar src={avatar} alt="Profile" />
+          <Avatar src="/assets/images/avatar-image/avatar2.jpg" alt="Profile" />
         </NavLink>
       </Icons>
     </HeaderWrapper>
