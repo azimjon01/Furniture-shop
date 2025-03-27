@@ -1,13 +1,25 @@
-import { HeroSection, HeroTitle, HeroSubtext } from "./About.styles";
+import React from "react";
+import {
+  HeroContainer,
+  HeroContent,
+  Title,
+  Subtitle,
+  Button,
+} from "./About.styles";
 
-const Hero = () => {
+const Hero: React.FC = () => {
   return (
-    <HeroSection>
-      <HeroTitle>We Design Spaces That Inspire</HeroTitle>
-      <HeroSubtext>
-        Crafting premium furniture for modern lifestyles.
-      </HeroSubtext>
-    </HeroSection>
+    <HeroContainer>
+      <HeroContent>
+        <small>New Arrival</small>
+        <Title>Discover Our New Collection</Title>
+        <Subtitle>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit
+          tellus, luctus nec ullamcorper mattis.
+        </Subtitle>
+        <Button>BUY NOW</Button>
+      </HeroContent>
+    </HeroContainer>
   );
 };
 
