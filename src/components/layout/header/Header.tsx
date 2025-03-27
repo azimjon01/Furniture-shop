@@ -20,10 +20,22 @@ import {
 } from "./Header.styles";
 import { Dropdown } from "@/components/ui";
 import { useCartStore } from "@/components/store/useLikesStore";
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const Header = () => {
   const { items } = useCartStore();
   const totalItems = items.reduce((sum, item) => sum + (item.quantity || 1), 0);
+  const [query, setQuery] = useState("");
+  const navigate = useNavigate();
+
+  const handleSearch = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (query.trim() !== "") {
+      navigate(`/search?q=${query}`);
+    }
+  };
+
   return (
     <HeaderWrapper>
       <HeaderWrapperContainer>
@@ -55,11 +67,17 @@ const Header = () => {
             <NavLink to="/inspirations">Inspirations</NavLink>
           </NavLinkContainer>
         </Nav>
-
-        <SearchBar>
-          <SearchIcon src={searchIcon} alt="Search" />
-          <SearchInput type="text" placeholder="Search for minimalist chair" />
-        </SearchBar>
+        <form onSubmit={handleSearch}>
+          <SearchBar>
+            <SearchIcon src={searchIcon} alt="Search" />
+            <SearchInput
+              type="text"
+              placeholder="Search for minimalist chair"
+              value={query}
+              onChange={(e) => setQuery(e.target.value)}
+            />
+          </SearchBar>
+        </form>
       </HeaderWrapperContainer>
 
       <Icons>
