@@ -43,6 +43,7 @@ export const PagesButton = styled.button({
 });
 
 export const NavLink = styled(Link)({
+  position: "relative",
   textDecoration: "none",
   color: "#3A3A3A",
   fontSize: 16,
@@ -95,6 +96,18 @@ export const Icon = styled.img({
   width: 24,
   height: 24,
   cursor: "pointer",
+});
+
+export const ToTalIcon = styled.span({
+  background: "red",
+  color: "#fff",
+  borderRadius: "50%",
+  padding: "5px 10px",
+  fontSize: "14px",
+  fontWeight: "bold",
+  position: "absolute",
+  top: "20px",
+  right: "-30px",
 });
 
 export const Avatar = styled.img({

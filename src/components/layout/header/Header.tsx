@@ -5,6 +5,7 @@ import avatar from "../../../assets/images/avatar.png";
 
 import {
   Avatar,
+  CartLink,
   HeaderWrapper,
   HeaderWrapperContainer,
   Icon,
@@ -17,10 +18,14 @@ import {
   SearchBar,
   SearchIcon,
   SearchInput,
+  ToTalIcon,
 } from "./Header.styles";
 import { Dropdown } from "@/components/ui";
+import { useCartStore } from "@/components/store/useLikesStore";
 
 const Header = () => {
+  const { items } = useCartStore();
+  const totalItems = items.reduce((sum, item) => sum + (item.quantity || 1), 0);
   return (
     <HeaderWrapper>
       <HeaderWrapperContainer>
@@ -65,6 +70,7 @@ const Header = () => {
         </NavLink>
         <NavLink to="/products">
           <Icon src={cartIcon} alt="Cart" />
+          {totalItems > 0 && <ToTalIcon>+{totalItems}</ToTalIcon>}
         </NavLink>
         <NavLink to="/profile">
           <Avatar src={avatar} alt="Profile" />
