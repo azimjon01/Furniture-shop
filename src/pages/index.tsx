@@ -11,3 +11,4 @@ export { default as Badroom } from "./badroom";
 export { default as Office } from "./office";
 export { default as Inspirations } from "./inspirations";
 export { default as Likes } from "./likes";
+export { default as Products } from "./products";
