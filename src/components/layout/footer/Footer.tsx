@@ -23,9 +23,9 @@ const Footer = () => {
             Worldwide furniture store since 2020. We sell over 1000+ branded
             products on our website.
           </Text>
-          <Text>📍 Sawojajar Malang, Indonesia</Text>
-          <Text>📞 +6289 456 3455</Text>
-          <Text>🌐 www.funiro.com</Text>
+          <Text>📍 Mamatqulov Azimjon, O'zbekiston</Text>
+          <Text>📞 +998 93 100 30 18</Text>
+          <Text>🌐 https://github.com/azimjon01</Text>
         </Column>
 
         <Column>
