@@ -1,4 +1,4 @@
-import { useLikesStore } from "../store/useLikesStore";
+import { useCartStore } from "../store/useLikesStore";
 import { allData } from "@/data/allData";
 import ProductCard from "./product-card";
 import styled from "@emotion/styled";
@@ -51,7 +51,7 @@ const ShowMore = styled.button({
 
 export const LikedProducts = () => {
   const [visibleProducts, setVisibleProducts] = useState(8);
-  const { likedItems } = useLikesStore();
+  const { likedItems } = useCartStore();
 
   // Barcha mahsulotlarni olish va category qo'shish
   const likedProducts = allData.categories

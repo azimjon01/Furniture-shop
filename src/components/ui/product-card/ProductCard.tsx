@@ -26,9 +26,12 @@ import {
   ShareText,
   Title,
 } from "./ProductCard.styles";
-import { useLikesStore } from "@/components/store/useLikesStore";
+import { useCartStore } from "@/components/store/useLikesStore";
+import React from "react";
 
-const ProductCard: React.FC<ProductCardProps> = ({
+const ProductCard: React.FC<
+  ProductCardProps & { children?: React.ReactNode }
+> = ({
   id,
   image,
   title,
@@ -37,11 +40,12 @@ const ProductCard: React.FC<ProductCardProps> = ({
   oldPrice,
   discount,
   isNew,
-  category,
+  children,
 }) => {
   // const [isLiked, SetIsLiked] = useState(false);
-  const { likedItems, toggleLike } = useLikesStore();
+  const { likedItems, toggleLike } = useCartStore();
   const isLiked = likedItems.includes(id);
+  const { addToCart } = useCartStore();
   return (
     <Card>
       <Image src={image} alt={title} />
@@ -49,7 +53,23 @@ const ProductCard: React.FC<ProductCardProps> = ({
       {isNew && <NewBadge>New</NewBadge>}
       <Overlay className="overlay">
         <ButtonContainer>
-          <Button>Add to cart</Button>
+          {children}
+          <Button
+            onClick={() =>
+              addToCart({
+                id,
+                image,
+                title,
+                description,
+                price,
+                oldPrice,
+                discount,
+                isNew,
+              })
+            }
+          >
+            Add to cart
+          </Button>
           <InformationContainer>
             <ShareContainer>
               <ShareIcon src={share} alt="Share Icon" />
@@ -59,7 +79,7 @@ const ProductCard: React.FC<ProductCardProps> = ({
               <HeartIcon
                 src={isLiked ? heartRed : heart}
                 alt="Heart Icon"
-                onClick={() => toggleLike(id, category)}
+                onClick={() => toggleLike(id)}
               />
               <HeartText>Like</HeartText>
             </HeartContainer>
