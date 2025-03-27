@@ -71,3 +71,29 @@ export const useCartStore = create<CartState>((set) => ({
         : [...state.likedItems, id],
     })),
 }));
+
+// Profile store
+
+interface ProfileState {
+  name: string;
+  username: string;
+  bio: string;
+  avatar: string;
+  posts: number;
+  followers: number;
+  following: number;
+  isFollowing: boolean;
+  toggleFollow: () => void;
+}
+
+export const useProfileStore = create<ProfileState>((set) => ({
+  name: "Azimjon Mamatqulov",
+  username: "Azimjon",
+  bio: "Frontend Developer | React & TypeScript | Zustand & Emotion Styled",
+  avatar: "/profile.jpg",
+  posts: 114,
+  followers: 6236,
+  following: 23,
+  isFollowing: false,
+  toggleFollow: () => set((state) => ({ isFollowing: !state.isFollowing })),
+}));
