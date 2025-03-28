@@ -1,7 +1,7 @@
 import Confirmation from "@/components/ui/checkout-components/checkout-forms/Confirmation";
 import DeliveryForm from "@/components/ui/checkout-components/checkout-forms/DeliveryForm";
 import PaymentForm from "@/components/ui/checkout-components/checkout-forms/PaymentForm";
-import OrderSummary from "@/components/ui/checkout-components/checkout-ui/OrderSummary";
+import OrderSummary from "@/components/ui/checkout-components/checkout-ui/order-summary/OrderSummary";
 import Stepper from "@/components/ui/checkout-components/checkout-ui/Stepper";
 import styled from "@emotion/styled";
 import { useState } from "react";
