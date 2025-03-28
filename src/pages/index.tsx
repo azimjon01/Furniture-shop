@@ -13,3 +13,4 @@ export { default as Inspirations } from "./inspirations";
 export { default as Likes } from "./likes";
 export { default as Products } from "./products";
 export { default as ProfilePage } from "./profile";
+export { default as Checkout } from "./checkout";

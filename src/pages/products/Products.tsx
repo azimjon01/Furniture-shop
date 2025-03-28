@@ -2,13 +2,25 @@ import { useCartStore } from "@/components/store/useLikesStore";
 import { ProductCard } from "@/components/ui";
 import styled from "@emotion/styled";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+
+const ButtonsContainer = styled.div({
+  display: "flex",
+  gap: 20,
+});
 
 const Button = styled.button({
+  width: 100,
   padding: "10px 15px",
   cursor: "pointer",
   background: "#E89F71",
   color: "white",
   fontWeight: "bold",
+  border: "1px solid #E89F71",
+  "&:hover": {
+    background: "#fff",
+    color: "#E89F71",
+  },
 });
 
 const RemoveButton = styled.button({
@@ -110,6 +122,7 @@ const Products = () => {
     0,
   );
 
+  const navigate = useNavigate();
   return (
     <BigContainer>
       <ProductsTitle>Shopping Cart</ProductsTitle>
@@ -149,7 +162,10 @@ const Products = () => {
             </ShowMore>
           )}
           <h3>Total Price: ${totalPrice.toFixed(2)}</h3>
-          <Button onClick={clearCart}>Checkout</Button>
+          <ButtonsContainer>
+            <Button onClick={clearCart}>Clear</Button>
+            <Button onClick={() => navigate("/checkout")}>Buy Now</Button>
+          </ButtonsContainer>
         </>
       )}
     </BigContainer>
