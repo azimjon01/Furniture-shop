@@ -6,6 +6,7 @@ import {
   About,
   Badroom,
   Chairs,
+  Checkout,
   Home,
   Inspirations,
   Likes,
@@ -137,6 +138,14 @@ const AppRoutes = () => {
             element={
               <Layout>
                 <SearchPage />
+              </Layout>
+            }
+          />
+          <Route
+            path="/checkout"
+            element={
+              <Layout>
+                <Checkout />
               </Layout>
             }
           />
