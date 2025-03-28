@@ -1,68 +1,67 @@
 import styled from "@emotion/styled";
 
-export const Section = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background-color: #f0f3f7;
-  padding: 60px;
-  border-radius: 10px;
-`;
+export const Section = styled.div({
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "space-between",
+  backgroundColor: "#f0f3f7",
+  padding: "60px",
+  borderRadius: "10px",
+});
 
-export const Content = styled.div`
-  width: 50%;
-`;
+export const Content = styled.div({
+  width: "50%",
+});
 
-export const Title = styled.h2`
-  font-size: 24px;
-  font-weight: bold;
-  margin-bottom: 10px;
-`;
+export const Title = styled.h2({
+  fontSize: "24px",
+  fontWeight: "bold",
+  marginBottom: "10px",
+});
 
-export const Text = styled.p`
-  font-size: 16px;
-  color: #555;
-  margin-bottom: 20px;
-`;
+export const Text = styled.p({
+  fontSize: "16px",
+  color: "#555",
+  marginBottom: "20px",
+});
 
-export const Button = styled.button`
-  background-color: #003366;
-  color: white;
-  padding: 12px 24px;
-  font-size: 16px;
-  border: none;
-  border-radius: 20px;
-  cursor: pointer;
-  transition: background 0.3s;
+export const Button = styled.button({
+  backgroundColor: "#003366",
+  color: "white",
+  padding: "12px 24px",
+  fontSize: "16px",
+  border: "none",
+  borderRadius: "20px",
+  cursor: "pointer",
+  transition: "background 0.3s",
+  ":hover": {
+    backgroundColor: "#002244",
+  },
+});
 
-  &:hover {
-    background-color: #002244;
-  }
-`;
+export const ImageWrapper = styled.div({
+  position: "relative",
+  width: "40%",
+  display: "flex",
+  justifyContent: "center",
+});
 
-export const ImageWrapper = styled.div`
-  position: relative;
-  width: 40%;
-  display: flex;
-  justify-content: center;
-`;
+export const BackgroundCircle = styled.div({
+  position: "absolute",
+  width: "120px",
+  height: "120px",
+  backgroundColor: "#16543a",
+  borderRadius: "50%",
+  right: "400px",
+  bottom: "-60px",
+  transform: "translateY(-50%)",
+});
 
-export const BackgroundCircle = styled.div`
-  position: absolute;
-  width: 120px;
-  height: 120px;
-  background-color: #16543a;
-  border-radius: 50%;
-  right: 400px;
-  bottom: -60px;
-  transform: translateY(-50%);
-`;
-
-export const Image = styled.img`
-  width: 100%;
-  max-width: 300px;
-  border-radius: 15px;
-  position: relative;
-  z-index: 1;
-  cursor: pointer;
-`;
+export const Image = styled.img({
+  width: "100%",
+  maxWidth: "300px",
+  borderRadius: "15px",
+  position: "relative",
+  zIndex: 1,
+  cursor: "pointer",
+});

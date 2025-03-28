@@ -1,25 +1,25 @@
 import React from "react";
 import styled from "@emotion/styled";
 
-const DetailsContainer = styled.div`
-  padding: 20px;
-  font-size: 14px;
-  color: #333;
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-`;
+const DetailsContainer = styled.div({
+  padding: "20px",
+  fontSize: "14px",
+  color: "#333",
+  display: "flex",
+  flexDirection: "column",
+  gap: "8px",
+});
 
-const DetailItem = styled.div`
-  display: flex;
-  align-items: center;
-  gap: 10px;
-`;
+const DetailItem = styled.div({
+  display: "flex",
+  alignItems: "center",
+  gap: "10px",
+});
 
-const Icon = styled.span`
-  font-size: 16px;
-  color: gray;
-`;
+const Icon = styled.span({
+  fontSize: "16px",
+  color: "gray",
+});
 
 const ProfileDetails: React.FC = () => {
   return (

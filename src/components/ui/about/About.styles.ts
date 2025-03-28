@@ -48,42 +48,42 @@ export const Button = styled.button({
 
 // AboutFeature styles
 
-export const FeatureContainer = styled.div`
-  display: flex;
-  justify-content: space-between;
-  background: #f4f6f8;
-  padding: 20px 40px;
-  border-radius: 10px;
-  margin-top: 50px;
-`;
+export const FeatureContainer = styled.div({
+  display: "flex",
+  justifyContent: "space-between",
+  background: "#f4f6f8",
+  padding: "20px 40px",
+  borderRadius: "10px",
+  marginTop: "50px",
+});
 
-export const FeatureItemWrapper = styled.div`
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  flex: 1;
-  text-align: center;
-`;
+export const FeatureItemWrapper = styled.div({
+  display: "flex",
+  alignItems: "center",
+  gap: "10px",
+  flex: 1,
+  textAlign: "center",
+});
 
-export const IconWrapper = styled.div`
-  cursor: pointer;
-  font-size: 24px;
-`;
+export const IconWrapper = styled.div({
+  cursor: "pointer",
+  fontSize: "24px",
+});
 
-export const FeatureText = styled.div`
-  display: flex;
-  flex-direction: column;
-  cursor: pointer;
-`;
+export const FeatureText = styled.div({
+  display: "flex",
+  flexDirection: "column",
+  cursor: "pointer",
+});
 
-export const FeatureTitle = styled.h3`
-  font-size: 16px;
-  font-weight: bold;
-  margin: 0;
-`;
+export const FeatureTitle = styled.h3({
+  fontSize: "16px",
+  fontWeight: "bold",
+  margin: 0,
+});
 
-export const FeatureDescription = styled.p`
-  font-size: 14px;
-  color: #555;
-  margin: 0;
-`;
+export const FeatureDescription = styled.p({
+  fontSize: "14px",
+  color: "#555",
+  margin: 0,
+});

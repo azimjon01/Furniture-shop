@@ -2,26 +2,26 @@ import React from "react";
 import styled from "@emotion/styled";
 import { useProfileStore } from "@/components/store/useLikesStore";
 
-const StatsContainer = styled.div`
-  display: flex;
-  justify-content: space-around;
-  padding: 20px;
-`;
+const StatsContainer = styled.div({
+  display: "flex",
+  justifyContent: "space-around",
+  padding: "20px",
+});
 
-const StatBox = styled.div`
-  text-align: center;
-`;
+const StatBox = styled.div({
+  textAlign: "center",
+});
 
-const StatNumber = styled.h3`
-  font-size: 18px;
-  margin: 0;
-`;
+const StatNumber = styled.h3({
+  fontSize: "18px",
+  margin: 0,
+});
 
-const StatLabel = styled.p`
-  font-size: 12px;
-  color: gray;
-  margin: 0;
-`;
+const StatLabel = styled.p({
+  fontSize: "12px",
+  color: "gray",
+  margin: 0,
+});
 
 const ProfileStats: React.FC = () => {
   const { posts, followers, following } = useProfileStore();

@@ -7,7 +7,6 @@ const Home: React.FC = () => {
 
   return (
     <SHome.Container>
-      {/* Hero Section */}
       <SHome.Hero>
         <SHome.HeroText>
           <h1>Modern Furniture for Your Home</h1>
@@ -22,7 +21,6 @@ const Home: React.FC = () => {
         />
       </SHome.Hero>
 
-      {/* Product Grid */}
       <SHome.ProductGrid>
         {products.map((product) => (
           <SHome.ProductCard key={product.id}>

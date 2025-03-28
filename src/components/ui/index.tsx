@@ -6,3 +6,4 @@ export { default as FuniroGalery } from "./funiro-galery";
 export { default as ProductList } from "./product-list";
 export { default as ProductCard } from "./product-card";
 export { default as AllProducts } from "./all-products";
+export { default as OrderSummary } from "./checkout-components/checkout-ui/order-summary";

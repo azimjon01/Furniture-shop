@@ -7,7 +7,6 @@ import {
   Card,
   ImageWrapper,
   Image,
-  StepNumber,
   Label,
   Text,
 } from "./HowItWorks.styles";

@@ -4,14 +4,14 @@ import ProfileHeader from "./ProfilHeader";
 import ProfileStats from "./ProfilStats";
 import ProfileDetails from "./ProfilDetails";
 
-const CardContainer = styled.div`
-  max-width: 400px;
-  margin: auto;
-  background-color: white;
-  border-radius: 10px;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-`;
+const CardContainer = styled.div({
+  maxWidth: "400px",
+  margin: "auto",
+  backgroundColor: "white",
+  borderRadius: "10px",
+  boxShadow: "0px 4px 8px rgba(0, 0, 0, 0.1)",
+  overflow: "hidden",
+});
 
 const ProfileCard: React.FC = () => {
   return (

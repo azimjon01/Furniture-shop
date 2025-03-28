@@ -33,14 +33,12 @@ const Carousel: React.FC = () => {
 
   return (
     <SliderWrapper>
-      {/* Chap tarafdagi matn */}
       <Content>
         <h2>{slides[currentIndex].bigTitle}</h2>
         <p>{slides[currentIndex].bigSubtitle}</p>
         <ExploreButton>Explore More</ExploreButton>
       </Content>
 
-      {/* Slayder rasmi */}
       <SlideContainer>
         <Slide translateX={currentIndex}>
           {slides.map((slide) => (
@@ -61,7 +59,6 @@ const Carousel: React.FC = () => {
           ))}
         </Slide>
 
-        {/* Oldinga va orqaga o'tish tugmalari */}
         <PrevButton onClick={prevSlide}>
           <NavIcon rotate="180deg" src="/assets/icons/carusel-icon.svg" />
         </PrevButton>
@@ -69,7 +66,6 @@ const Carousel: React.FC = () => {
           <NavIcon rotate="0deg" src="/assets/icons/carusel-icon.svg" />
         </NextButton>
 
-        {/* nuqtalar */}
         <Pagination>
           {slides.map((_, index) => (
             <DotContainer

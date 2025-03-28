@@ -1,5 +1,5 @@
 import { ReactNode, useState, useRef, useEffect } from "react";
-import { useNavigate } from "react-router-dom"; // React Router navigatsiya
+import { useNavigate } from "react-router-dom";
 import {
   DropdownContainer,
   DropdownItem,
@@ -11,7 +11,7 @@ import {
 const Dropdown = ({
   label,
   options,
-  links, // Har bir option uchun linklar
+  links,
 }: {
   label: ReactNode;
   options: string[];
@@ -19,9 +19,8 @@ const Dropdown = ({
 }) => {
   const [isOpen, setIsOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement | null>(null);
-  const navigate = useNavigate(); // React Router navigate
+  const navigate = useNavigate();
 
-  // Modal tashqarisiga bosilganda yopish
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       if (
@@ -38,10 +37,9 @@ const Dropdown = ({
     };
   }, []);
 
-  // Sahifaga o'tish
   const handleNavigate = (link: string) => {
     setIsOpen(false);
-    navigate(link); // React Router orqali yo'naltirish
+    navigate(link);
   };
 
   return (

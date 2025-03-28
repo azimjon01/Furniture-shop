@@ -9,7 +9,7 @@ import {
 } from "./OrderSummary.styles";
 
 export default function OrderSummary() {
-  const { items } = useCartStore(); // 🛒 Savatchadan mahsulotlarni olish
+  const { items } = useCartStore();
 
   const subtotal = items.reduce(
     (sum, item) => sum + item.price * item.quantity,

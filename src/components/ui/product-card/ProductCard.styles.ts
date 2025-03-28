@@ -48,15 +48,15 @@ const Button = styled.button({
   color: "#E89F71",
   border: "none",
   cursor: "pointer",
-  transition: "all 0.2s ease-in-out", // ✅ Yumshoq o'tish effekti qo'shish
+  transition: "all 0.2s ease-in-out",
   "&:hover": {
     background: "#E89F71",
     color: "#fff",
   },
   "&:active": {
-    background: "green", // ✅ Bosilganda yashilga o'zgaradi
+    background: "green",
     color: "#fff",
-    transform: "scale(0.95)", // ✅ Tugma biroz kichrayib, bosilganligi ko'rinadi
+    transform: "scale(0.95)",
   },
 });
 

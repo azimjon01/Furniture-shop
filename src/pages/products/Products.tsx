@@ -25,7 +25,6 @@ const Products = () => {
   } = useCartStore();
   const [visibleProducts, setVisibleProducts] = useState(8);
 
-  // ✅ Umumiy narxni hisoblash
   const totalPrice = items.reduce(
     (sum, item) => sum + item.price * item.quantity,
     0,
@@ -52,7 +51,6 @@ const Products = () => {
                     -
                   </CounterButton>
                   <Total>{item.quantity}</Total>{" "}
-                  {/* ✅ quantities[item.id] o‘rniga item.quantity ishlatilmoqda */}
                   <CounterButton onClick={() => increaseQuantity(item.id)}>
                     +
                   </CounterButton>

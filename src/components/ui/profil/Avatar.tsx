@@ -1,18 +1,18 @@
 import React from "react";
 import styled from "@emotion/styled";
 
-const AvatarContainer = styled.div`
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  overflow: hidden;
-`;
+const AvatarContainer = styled.div({
+  width: "100px",
+  height: "100px",
+  borderRadius: "50%",
+  overflow: "hidden",
+});
 
-const AvatarImage = styled.img`
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-`;
+const AvatarImage = styled.img({
+  width: "100%",
+  height: "100%",
+  objectFit: "cover",
+});
 
 interface AvatarProps {
   src: string;

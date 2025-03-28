@@ -1,47 +1,3 @@
-// import styled from "@emotion/styled";
-
-// export const Container = styled.div({
-//   background: "blue",
-//   padding: "20px",
-// });
-
-// export const Title = styled.h2({
-//   textAlign: "center",
-//   fontSize: "28px",
-//   fontWeight: "bold",
-//   marginBottom: "20px",
-// });
-
-// export const ProductsWrapper = styled.div({
-//   background: "red",
-//   display: "flex",
-//   flexWrap: "wrap",
-//   gap: "20px",
-//   justifyContent: "center",
-// });
-
-// export const Category = styled.div({
-//   width: "100%",
-//   maxWidth: "400px",
-// });
-
-// export const CategoryTitle = styled.h1({
-//   fontSize: "22px",
-//   fontWeight: "bold",
-//   display: "flex",
-//   alignItems: "center",
-//   gap: "10px",
-// });
-
-// export const Count = styled.span({
-//   backgroundColor: "#ff6600",
-//   color: "white",
-//   fontSize: "14px",
-//   padding: "4px 10px",
-//   borderRadius: "12px",
-// });
-//
-
 import styled from "@emotion/styled";
 
 export const Container = styled.div({
@@ -56,9 +12,6 @@ export const Title = styled.h2({
 });
 
 export const ProductsWrapper = styled.div({
-  // display: "grid",
-  // gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
-  // gridAutoFlow: "row",
   display: "flex",
   background: "red",
   flexDirection: "column",

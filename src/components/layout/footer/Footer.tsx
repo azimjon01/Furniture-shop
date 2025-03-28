@@ -1,4 +1,4 @@
-import { FiSend } from "react-icons/fi"; // Ikonka uchun
+import { FiSend } from "react-icons/fi";
 import {
   BigContainer,
   Column,

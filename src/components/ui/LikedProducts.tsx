@@ -53,15 +53,14 @@ export const LikedProducts = () => {
   const [visibleProducts, setVisibleProducts] = useState(8);
   const { likedItems } = useCartStore();
 
-  // Barcha mahsulotlarni olish va category qo'shish
   const likedProducts = allData.categories
     .flatMap((category) =>
       category.products.map((product) => ({
         ...product,
-        category: category.category, // Kategoriya nomini qo'shamiz
+        category: category.category,
       })),
     )
-    .filter((item) => likedItems.includes(item.id)); // Faqat yoqilgan mahsulotlarni qoldiramiz
+    .filter((item) => likedItems.includes(item.id));
 
   if (likedProducts.length === 0) {
     return <p>You haven't liked any inspirations yet.</p>;

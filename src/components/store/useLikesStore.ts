@@ -23,7 +23,6 @@ export const useCartStore = create<CartState>((set) => ({
   items: [],
   likedItems: [],
 
-  // 🛒 Mahsulotni savatchaga qo‘shish
   addToCart: (item) =>
     set((state) => {
       const existingItem = state.items.find((i) => i.id === item.id);
@@ -36,16 +35,13 @@ export const useCartStore = create<CartState>((set) => ({
       };
     }),
 
-  // ❌ Mahsulotni butunlay olib tashlash
   removeFromCart: (id) =>
     set((state) => ({
       items: state.items.filter((i) => i.id !== id),
     })),
 
-  // 🔄 Savatchani tozalash
   clearCart: () => set(() => ({ items: [], likedItems: [] })),
 
-  // ➕ Mahsulot sonini oshirish
   increaseQuantity: (id) =>
     set((state) => ({
       items: state.items.map((i) =>
@@ -53,17 +49,15 @@ export const useCartStore = create<CartState>((set) => ({
       ),
     })),
 
-  // ➖ Mahsulot sonini kamaytirish, agar 0 bo‘lsa, savatchadan o‘chirish
   decreaseQuantity: (id) =>
     set((state) => {
       const updatedItems = state.items
         .map((i) => (i.id === id ? { ...i, quantity: i.quantity - 1 } : i))
-        .filter((i) => i.quantity > 0); // ✅ Agar 0 bo‘lsa, o‘chirilsin
+        .filter((i) => i.quantity > 0);
 
       return { items: updatedItems };
     }),
 
-  // ❤️ Like bosish yoki olib tashlash
   toggleLike: (id) =>
     set((state) => ({
       likedItems: state.likedItems.includes(id)
@@ -71,8 +65,6 @@ export const useCartStore = create<CartState>((set) => ({
         : [...state.likedItems, id],
     })),
 }));
-
-// Profile store
 
 interface ProfileState {
   name: string;

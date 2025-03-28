@@ -1,7 +1,7 @@
 import { create } from "zustand";
 
 interface LikeState {
-  likedItems: number[]; // Like qilingan mahsulot IDlari
+  likedItems: number[];
   toggleLike: (id: number) => void;
 }
 
@@ -14,8 +14,6 @@ export const useLikesStore = create<LikeState>((set) => ({
         : [...state.likedItems, id],
     })),
 }));
-
-// Products da product qoshish
 
 interface CartItem {
   id: number;
