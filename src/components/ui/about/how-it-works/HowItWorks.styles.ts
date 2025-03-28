@@ -39,16 +39,19 @@ export const Image = styled.img`
   height: 100%;
   object-fit: cover;
   border-radius: 15px;
+  cursor: pointer;
 `;
 
 export const Label = styled.p`
   font-size: 18px;
   font-weight: bold;
   margin-top: 12px;
+  cursor: pointer;
 `;
 
 export const Text = styled.p`
   font-size: 14px;
   color: #777;
   margin-top: 5px;
+  cursor: pointer;
 `;
