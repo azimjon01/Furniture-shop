@@ -1,5 +1,6 @@
 import { useLocation } from "react-router-dom";
 import { allData } from "@/data/allData";
+import { ProductList } from "@/components/ui";
 
 const SearchPage = () => {
   const location = useLocation();
