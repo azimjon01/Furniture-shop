@@ -9,7 +9,7 @@ export const imagesAll = [
     price: "$1,499",
   },
   {
-    img: "/assets/images/slider/slider-one.two",
+    img: "/assets/images/slider/slider-two.png",
     title: "Classic Wooden Dining Set",
     description:
       "A beautifully crafted wooden dining set that brings a touch of elegance to your home. Spacious and durable.",
@@ -18,7 +18,7 @@ export const imagesAll = [
     price: "$899",
   },
   {
-    img: "/assets/images/slider/slider-one.three",
+    img: "/assets/images/slider/slider-three.jpeg",
     title: "Minimalist Office Chair",
     description:
       "An ergonomic office chair designed to provide maximum support and style. Perfect for long working hours.",
@@ -27,7 +27,7 @@ export const imagesAll = [
     price: "$299",
   },
   {
-    img: "/assets/images/slider/slider-one.four",
+    img: "/assets/images/slider/slider-four.png",
     title: "Modern Bedroom Set",
     description:
       "A complete bedroom set featuring a comfortable bed, nightstands, and a stylish wardrobe. Perfect for a modern lifestyle.",
