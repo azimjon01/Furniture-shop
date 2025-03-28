@@ -28,6 +28,7 @@ export const Card = styled.div({
   boxShadow: "0 4px 6px rgba(0,0,0,0.1)",
   backgroundColor: "#fff",
   transition: "background-color 0.3s ease, transform 0.2s ease",
+  cursor: "pointer",
   "&:hover": {
     backgroundColor: "#f0f0f0",
     transform: "scale(1.05)",
