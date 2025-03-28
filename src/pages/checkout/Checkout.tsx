@@ -1,75 +1,37 @@
+import Confirmation from "@/components/ui/checkout-components/checkout-forms/Confirmation";
+import DeliveryForm from "@/components/ui/checkout-components/checkout-forms/DeliveryForm";
+import PaymentForm from "@/components/ui/checkout-components/checkout-forms/PaymentForm";
+import OrderSummary from "@/components/ui/checkout-components/checkout-ui/OrderSummary";
+import Stepper from "@/components/ui/checkout-components/checkout-ui/Stepper";
 import styled from "@emotion/styled";
 import { useState } from "react";
 
-const CheckoutContainer = styled.div({
-  maxWidth: "600px",
+const Container = styled.div({
+  display: "flex",
+  justifyContent: "space-between",
+  maxWidth: "900px",
   margin: "auto",
   padding: "20px",
-  background: "#fff",
-  borderRadius: "8px",
-  boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.1)",
 });
 
-const Title = styled.h2({
-  textAlign: "center",
-  marginBottom: "20px",
-});
-
-const Input = styled.input({
-  width: "100%",
-  padding: "10px",
-  marginBottom: "10px",
-  border: "1px solid #ccc",
-  borderRadius: "5px",
-});
-
-const Button = styled.button({
-  width: "100%",
-  padding: "10px",
-  background: "#007bff",
-  color: "#fff",
-  border: "none",
-  borderRadius: "5px",
-  cursor: "pointer",
-  "&:hover": {
-    background: "#0056b3",
-  },
+const FormContainer = styled.div({
+  width: "60%",
 });
 
 export default function Checkout() {
-  const [formData, setFormData] = useState({ name: "", card: "" });
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    alert("Purchase Successful!");
-  };
+  const [step, setStep] = useState(1);
 
   return (
-    <CheckoutContainer>
-      <Title>Buy Now</Title>
-      <form onSubmit={handleSubmit}>
-        <Input
-          type="text"
-          name="name"
-          placeholder="Full Name"
-          value={formData.name}
-          onChange={handleChange}
-          required
-        />
-        <Input
-          type="text"
-          name="card"
-          placeholder="Card Number"
-          value={formData.card}
-          onChange={handleChange}
-          required
-        />
-        <Button type="submit">Pay Now</Button>
-      </form>
-    </CheckoutContainer>
+    <div>
+      <Stepper step={step} />
+      <Container>
+        <FormContainer>
+          {step === 1 && <DeliveryForm onNext={() => setStep(2)} />}
+          {step === 2 && <PaymentForm onNext={() => setStep(3)} />}
+          {step === 3 && <Confirmation />}
+        </FormContainer>
+        <OrderSummary />
+      </Container>
+    </div>
   );
 }
