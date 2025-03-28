@@ -39,6 +39,7 @@ export const Card = styled.div({
   overflow: "hidden",
   boxShadow: "0 4px 10px rgba(0, 0, 0, 0.1)",
   textAlign: "left",
+  cursor: "pointer",
 });
 
 export const Image = styled.img({
