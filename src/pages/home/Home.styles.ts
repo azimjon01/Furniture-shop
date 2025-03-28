@@ -27,6 +27,7 @@ export const SHome = {
   HeroImage: styled.img({
     width: "50%",
     borderRadius: 10,
+    cursor: "pointer",
   }),
   ProductGrid: styled.div({
     display: "grid",
@@ -40,6 +41,7 @@ export const SHome = {
     borderRadius: 10,
     boxShadow: "0 2px 10px rgba(0,0,0,0.1)",
     textAlign: "center",
+    cursor: "pointer",
     "& img": {
       width: "100%",
       borderRadius: 10,
