@@ -64,4 +64,5 @@ export const Image = styled.img`
   border-radius: 15px;
   position: relative;
   z-index: 1;
+  cursor: pointer;
 `;

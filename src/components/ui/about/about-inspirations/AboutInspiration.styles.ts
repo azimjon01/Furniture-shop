@@ -29,6 +29,7 @@ export const ImageItem = styled.div`
   width: 30%;
   border-radius: 10px;
   overflow: hidden;
+  cursor: pointer;
   img {
     width: 100%;
     height: auto;

@@ -39,6 +39,7 @@ export const Image = styled.img`
   height: 100%;
   object-fit: cover;
   border-radius: 15px;
+  cursor: pointer;
 `;
 
 export const Label = styled.p`
