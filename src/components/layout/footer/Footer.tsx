@@ -11,8 +11,16 @@ import {
   Text,
   Title,
 } from "./Footer.styles";
+import React, { useState } from "react";
 
 const Footer = () => {
+  const [email, setEmail] = useState("");
+
+  const handleSend = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!email.trim()) return;
+    setEmail("");
+  };
   return (
     <BigContainer>
       <Line />
@@ -54,9 +62,14 @@ const Footer = () => {
 
         <Column>
           <Title>Stay Updated</Title>
-          <EmailForm>
-            <EmailInput type="email" placeholder="Enter your email" />
-            <SendButton>
+          <EmailForm onSubmit={handleSend}>
+            <EmailInput
+              type="email"
+              placeholder="Enter your email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+            />
+            <SendButton type="submit">
               <FiSend />
             </SendButton>
           </EmailForm>

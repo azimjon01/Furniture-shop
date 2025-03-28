@@ -48,7 +48,7 @@ const Link = styled.a({
   },
 });
 
-const EmailForm = styled.div({
+const EmailForm = styled.form({
   display: "flex",
   border: "1px solid #ddd",
   borderRadius: "5px",
