@@ -7,7 +7,8 @@ interface LikeButtonProps {
 
 export const LikeButton: React.FC<LikeButtonProps> = ({ id }) => {
   const { likedItems, toggleLike } = useLikesStore();
-  const isLiked = likedItems.some((item) => item.id == id);
+
+  const isLiked = likedItems.some((item) => item === id);
 
   return (
     <button onClick={() => toggleLike(id)}>
