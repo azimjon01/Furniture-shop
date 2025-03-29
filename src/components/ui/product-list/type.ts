@@ -8,6 +8,7 @@ export type Product = {
   discount?: string;
   isNew?: boolean;
   category?: string;
+  quantity: number;
 };
 
 // export type Product = {
