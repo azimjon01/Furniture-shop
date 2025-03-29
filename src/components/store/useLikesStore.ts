@@ -6,11 +6,11 @@ interface CartItem {
   title: string;
   description: string;
   price: number;
-  oldPrice?: string;
-  discount?: string;
+  oldPrice?: number;
+  discount?: number;
   isNew?: boolean;
   category?: string;
-  quantity: number;
+  quantity?: number;
 }
 
 interface CartState {

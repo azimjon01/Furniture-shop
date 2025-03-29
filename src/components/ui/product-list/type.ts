@@ -4,24 +4,9 @@ export type Product = {
   title: string;
   description: string;
   price: number;
-  oldPrice?: string;
-  discount?: string;
+  oldPrice?: number;
+  discount?: number;
   isNew?: boolean;
   category?: string;
-  quantity: number;
+  quantity?: number;
 };
-
-// export type Product = {
-//   category: string;
-//   bigTitle: string;
-//   products: [
-//     id: number,
-//     image: string,
-//     title: string,
-//     description: string,
-//     price: number,
-//     oldPrice?: string,
-//     discount?: string,
-//     isNew?: boolean,
-//   ];
-// };
