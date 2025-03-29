@@ -3,7 +3,7 @@ export interface ProductCardProps {
   image: string;
   title: string;
   description: string;
-  price: string;
+  price: number;
   oldPrice?: string;
   discount?: string;
   isNew?: boolean;
