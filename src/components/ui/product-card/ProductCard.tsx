@@ -94,7 +94,7 @@ const ProductCard: React.FC<
             <DescriptionProduct>{description}</DescriptionProduct>
           </Info>
           <Price>
-            <NewPrice>{price}</NewPrice>
+            <NewPrice>${price}</NewPrice>
             {oldPrice && <OldPrice>{oldPrice}</OldPrice>}
           </Price>
         </Information>
