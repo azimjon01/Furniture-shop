@@ -50,7 +50,7 @@ const ProductCard: React.FC<
   return (
     <Card>
       <Image src={image} alt={title} />
-      {discount && <DiscountBadge>-{discount}</DiscountBadge>}
+      {discount && <DiscountBadge>-{discount}%</DiscountBadge>}
       {isNew && <NewBadge>New</NewBadge>}
       <Overlay className="overlay">
         <ButtonContainer>
@@ -95,7 +95,7 @@ const ProductCard: React.FC<
           </Info>
           <Price>
             <NewPrice>${price}</NewPrice>
-            {oldPrice && <OldPrice>{oldPrice}</OldPrice>}
+            {oldPrice && <OldPrice>${oldPrice}</OldPrice>}
           </Price>
         </Information>
       </InformationCard>
