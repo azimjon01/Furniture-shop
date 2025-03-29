@@ -3,17 +3,14 @@ import { useLikesStore } from "./LikeProductCard";
 
 interface LikeButtonProps {
   id: number;
-  category: string;
 }
 
-export const LikeButton: React.FC<LikeButtonProps> = ({ id, category }) => {
+export const LikeButton: React.FC<LikeButtonProps> = ({ id }) => {
   const { likedItems, toggleLike } = useLikesStore();
-  const isLiked = likedItems.some(
-    (item) => item.id === id && item.category === category,
-  );
+  const isLiked = likedItems.some((item) => item.id == id);
 
   return (
-    <button onClick={() => toggleLike(id, category)}>
+    <button onClick={() => toggleLike(id)}>
       {" "}
       {isLiked ? <FaHeart color="red" /> : <FaRegHeart color="gray" />}
     </button>
