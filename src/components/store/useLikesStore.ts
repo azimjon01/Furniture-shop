@@ -2,9 +2,14 @@ import { create } from "zustand";
 
 interface CartItem {
   id: number;
-  title: string;
-  price: number;
   image: string;
+  title: string;
+  description: string;
+  price: number;
+  oldPrice?: string;
+  discount?: string;
+  isNew?: boolean;
+  category?: string;
   quantity: number;
 }
 
