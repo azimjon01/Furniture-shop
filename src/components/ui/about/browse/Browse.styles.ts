@@ -46,4 +46,5 @@ export const Label = styled.p({
   fontSize: "18px",
   fontWeight: "bold",
   marginTop: "12px",
+  cursor: "pointer",
 });
