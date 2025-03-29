@@ -12,7 +12,7 @@ export default function OrderSummary() {
   const { items } = useCartStore();
 
   const subtotal = items.reduce(
-    (sum, item) => sum + item.price * item.quantity,
+    (sum, item) => sum + item.price * (item.quantity ?? 1),
     0,
   );
   const shippingCost = 64;

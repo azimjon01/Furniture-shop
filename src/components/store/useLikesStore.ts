@@ -10,7 +10,7 @@ interface CartItem {
   discount?: number;
   isNew?: boolean;
   category?: string;
-  quantity?: number;
+  quantity: number;
 }
 
 interface CartState {
@@ -89,7 +89,7 @@ export const useProfileStore = create<ProfileState>((set) => ({
   name: "Azimjon Mamatqulov",
   username: "Azimjon",
   bio: "Frontend Developer | React & TypeScript | Zustand & Emotion Styled",
-  avatar: "/profile.jpg",
+  avatar: "/assets/images/avatar-image/avatar2.jpg",
   posts: 114,
   followers: 6236,
   following: 23,

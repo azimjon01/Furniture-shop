@@ -23,7 +23,7 @@ const Avatar: React.FC<AvatarProps> = ({ src, alt }) => {
   return (
     <AvatarContainer>
       <AvatarImage
-        src="/assets/images/avatar-image/avatar2.jpg"
+        src={src || "/assets/images/avatar-image/avatar2.jpg"}
         alt={alt || "Profile Picture"}
       />
     </AvatarContainer>
