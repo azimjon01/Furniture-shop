@@ -22,10 +22,16 @@ const Button = styled.button({
   cursor: "pointer",
 });
 
-export default function PaymentForm({ onNext }: { onNext: () => void }) {
-  const { register, handleSubmit } = useForm();
+interface PaymentData {
+  cardNumber: string;
+  expiry: string;
+  cvv: string;
+}
 
-  const onSubmit = (data: any) => {
+export default function PaymentForm({ onNext }: { onNext: () => void }) {
+  const { register, handleSubmit } = useForm<PaymentData>();
+
+  const onSubmit = (data: PaymentData) => {
     console.log(data);
     onNext();
   };

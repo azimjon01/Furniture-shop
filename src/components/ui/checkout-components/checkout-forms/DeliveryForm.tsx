@@ -22,10 +22,18 @@ const Button = styled.button({
   cursor: "pointer",
 });
 
-export default function DeliveryForm({ onNext }: { onNext: () => void }) {
-  const { register, handleSubmit } = useForm();
+interface FormData {
+  firstName: string;
+  lastName: string;
+  email: string;
+  phone: string;
+  address: string;
+}
 
-  const onSubmit = (data: any) => {
+export default function DeliveryForm({ onNext }: { onNext: () => void }) {
+  const { register, handleSubmit } = useForm<FormData>();
+
+  const onSubmit = (data: FormData) => {
     console.log(data);
     onNext();
   };
