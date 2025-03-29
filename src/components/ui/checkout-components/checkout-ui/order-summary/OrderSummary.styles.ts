@@ -8,6 +8,8 @@ export const Container = styled.div({
   borderRadius: "12px",
   boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.1)",
   display: "flex",
+  flexDirection: "column",
+  marginLeft: 50,
 });
 
 export const Title = styled.h3({
