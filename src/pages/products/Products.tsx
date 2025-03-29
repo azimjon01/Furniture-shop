@@ -26,7 +26,7 @@ const Products = () => {
   const [visibleProducts, setVisibleProducts] = useState(8);
 
   const totalPrice = items.reduce(
-    (sum, item) => sum + item.price * item.quantity,
+    (sum, item) => sum + item.price * (item.quantity ?? 1),
     0,
   );
 
