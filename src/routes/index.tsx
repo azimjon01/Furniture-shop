@@ -6,14 +6,20 @@ import {
   About,
   Badroom,
   Chairs,
+  Checkout,
   Home,
+  Inspirations,
+  Likes,
   LivingRoom,
   NotFound,
   Office,
+  Products,
+  ProfilePage,
   Shop,
   Sofas,
   Tables,
 } from "@/pages";
+import SearchPage from "@/pages/search-page/SearchPage";
 
 const AppRoutes = () => {
   return (
@@ -92,6 +98,54 @@ const AppRoutes = () => {
             element={
               <Layout>
                 <Office />
+              </Layout>
+            }
+          />
+          <Route
+            path="/inspirations"
+            element={
+              <Layout>
+                <Inspirations />
+              </Layout>
+            }
+          />
+          <Route
+            path="/likes"
+            element={
+              <Layout>
+                <Likes />
+              </Layout>
+            }
+          />
+          <Route
+            path="/products"
+            element={
+              <Layout>
+                <Products />
+              </Layout>
+            }
+          />
+          <Route
+            path="/profile"
+            element={
+              <Layout>
+                <ProfilePage />
+              </Layout>
+            }
+          />
+          <Route
+            path="/search"
+            element={
+              <Layout>
+                <SearchPage />
+              </Layout>
+            }
+          />
+          <Route
+            path="/checkout"
+            element={
+              <Layout>
+                <Checkout />
               </Layout>
             }
           />

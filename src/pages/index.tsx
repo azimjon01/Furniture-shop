@@ -1,6 +1,6 @@
 export { default as Welcome } from "./welcome";
-export { default as Home } from "./home";
 export { default as About } from "./about";
+export { default as Home } from "./home";
 export { default as Shop } from "./shop";
 export { default as NotFound } from "./not-found";
 export { default as Chairs } from "./chairs";
@@ -9,3 +9,8 @@ export { default as Sofas } from "./sofas";
 export { default as LivingRoom } from "./living-room";
 export { default as Badroom } from "./badroom";
 export { default as Office } from "./office";
+export { default as Inspirations } from "./inspirations";
+export { default as Likes } from "./likes";
+export { default as Products } from "./products";
+export { default as ProfilePage } from "./profile";
+export { default as Checkout } from "./checkout";

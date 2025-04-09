@@ -144,9 +144,6 @@ export const Slide = styled.div({
 });
 
 export const SlideImage = styled.img({
-  // width: "886px",
-  // height: "524.33px",
-  // marginLeft: "282px",
   width: "100%",
   height: "100%",
   objectFit: "cover",

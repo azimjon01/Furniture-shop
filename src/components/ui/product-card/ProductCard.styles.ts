@@ -14,7 +14,8 @@ const Card = styled.div({
 const Image = styled.img({
   position: "relative",
   width: "100%",
-  height: "285.39px",
+  height: "200px",
+  objectFit: "cover",
 });
 
 const Overlay = styled.div({
@@ -33,67 +34,64 @@ const Overlay = styled.div({
 });
 
 const ButtonContainer = styled.div({
+  width: "100%",
   display: "flex",
   justifyContent: "space-between",
   alignItems: "center",
   flexDirection: "column",
-  gap: "10px",
+  gap: "15px",
 });
 
 const Button = styled.button({
-  width: "191.62px",
-  height: "45.51px",
+  padding: "15px 60px",
   background: "#FFFFFF",
   color: "#E89F71",
   border: "none",
   cursor: "pointer",
+  transition: "all 0.2s ease-in-out",
   "&:hover": {
     background: "#E89F71",
     color: "#fff",
   },
+  "&:active": {
+    background: "green",
+    color: "#fff",
+    transform: "scale(0.95)",
+  },
 });
 
 const InformationContainer = styled.div({
-  width: "174.54px",
-  height: "22.76px",
   display: "flex",
   justifyContent: "space-between",
   alignItems: "center",
+  gap: "50px",
 });
 
 const ShareContainer = styled.div({
-  width: "71.15px",
-  height: "22.76px",
   display: "flex",
   justifyContent: "space-between",
   alignItems: "center",
   cursor: "pointer",
+  gap: "7px",
 });
 
 const ShareIcon = styled.img({
-  width: "22.76px",
-  height: "22.76px",
   cursor: "pointer",
 });
 
 const HeartIcon = styled.img({
-  width: "22.76px",
-  height: "22.76px",
   cursor: "pointer",
 });
 
 const HeartContainer = styled.div({
-  width: "57.87px",
-  height: "22.76px",
   display: "flex",
   justifyContent: "space-between",
   alignItems: "center",
+  gap: "7px",
   cursor: "pointer",
 });
 
 const ShareText = styled.p({
-  width: "40.79px",
-  height: "22.76px",
   color: "#fff",
   fontWeight: 600,
   fontSize: "15.17px",
@@ -102,8 +100,6 @@ const ShareText = styled.p({
 });
 
 const HeartText = styled.p({
-  width: "27.51px",
-  height: "22.76px",
   color: "#fff",
   fontWeight: 600,
   fontSize: "15.17px",
@@ -145,26 +141,21 @@ const NewBadge = styled.span({
 
 const InformationCard = styled.div({
   width: "100%",
-  background: "#F4F5F7",
-  paddingTop: "15.17px",
-  paddingLeft: "15.17px",
-  paddingBottom: "28.44px",
-  paddingRight: "140.39px",
+  height: "100%",
+  background: "#fff",
+  padding: "15px",
 });
 
 const Information = styled.div({
-  width: "114.78px",
-  minHeight: "93.87px",
+  width: "100%",
+  height: "100%",
   display: "flex",
   flexDirection: "column",
   justifyContent: "space-between",
   alignItems: "start",
 });
 
-const Info = styled.div({
-  // width: "76.84px",
-  // height: "57.84px",
-});
+const Info = styled.div({});
 
 const Title = styled.h3({
   color: "#3A3A3A",
@@ -183,8 +174,8 @@ const DescriptionProduct = styled.p({
 });
 
 const Price = styled.div({
-  width: "225.77px",
-  height: "28.44px",
+  width: "100%",
+  padding: "10px",
   display: "flex",
   justifyContent: "space-between",
   alignItems: "center",
@@ -193,7 +184,7 @@ const Price = styled.div({
 const NewPrice = styled.h3({
   color: "#3A3A3A",
   fontWeight: 569.89,
-  fontSize: 18.96,
+  fontSize: "18.96px",
   lineHeight: "150%",
   letterSpacing: "0%",
 });

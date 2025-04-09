@@ -1,4 +1,4 @@
-import { FiSend } from "react-icons/fi"; // Ikonka uchun
+import { FiSend } from "react-icons/fi";
 import {
   BigContainer,
   Column,
@@ -11,8 +11,16 @@ import {
   Text,
   Title,
 } from "./Footer.styles";
+import React, { useState } from "react";
 
 const Footer = () => {
+  const [email, setEmail] = useState("");
+
+  const handleSend = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!email.trim()) return;
+    setEmail("");
+  };
   return (
     <BigContainer>
       <Line />
@@ -23,9 +31,9 @@ const Footer = () => {
             Worldwide furniture store since 2020. We sell over 1000+ branded
             products on our website.
           </Text>
-          <Text>📍 Sawojajar Malang, Indonesia</Text>
-          <Text>📞 +6289 456 3455</Text>
-          <Text>🌐 www.funiro.com</Text>
+          <Text>📍 Mamatqulov Azimjon, O'zbekiston</Text>
+          <Text>📞 +998 93 100 30 18</Text>
+          <Text>🌐 https://github.com/azimjon01</Text>
         </Column>
 
         <Column>
@@ -54,9 +62,14 @@ const Footer = () => {
 
         <Column>
           <Title>Stay Updated</Title>
-          <EmailForm>
-            <EmailInput type="email" placeholder="Enter your email" />
-            <SendButton>
+          <EmailForm onSubmit={handleSend}>
+            <EmailInput
+              type="email"
+              placeholder="Enter your email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+            />
+            <SendButton type="submit">
               <FiSend />
             </SendButton>
           </EmailForm>

@@ -1,7 +1,6 @@
 import share from "../../../assets/icons/share.svg";
 import heart from "../../../assets/icons/heart.svg";
 import heartRed from "../../../assets/icons/heart-red.svg";
-import { useState } from "react";
 import { ProductCardProps } from "./ProductCard.types";
 import {
   Button,
@@ -27,8 +26,14 @@ import {
   ShareText,
   Title,
 } from "./ProductCard.styles";
+import { useCartStore } from "@/components/store/useLikesStore";
+import React, { useState } from "react";
+import ShareModal from "../share-modal/ShareModal";
 
-const ProductCard: React.FC<ProductCardProps> = ({
+const ProductCard: React.FC<
+  ProductCardProps & { children?: React.ReactNode }
+> = ({
+  id,
   image,
   title,
   description,
@@ -36,18 +41,38 @@ const ProductCard: React.FC<ProductCardProps> = ({
   oldPrice,
   discount,
   isNew,
+  children,
 }) => {
-  const [isLiked, SetIsLiked] = useState(false);
+  const { likedItems, toggleLike } = useCartStore();
+  const isLiked = likedItems.includes(id);
+  const { addToCart } = useCartStore();
+  const [isShareModalOpen, setIsShareModalOpen] = useState(false);
   return (
     <Card>
       <Image src={image} alt={title} />
-      {discount && <DiscountBadge>-{discount}</DiscountBadge>}
+      {discount && <DiscountBadge>-{discount}%</DiscountBadge>}
       {isNew && <NewBadge>New</NewBadge>}
       <Overlay className="overlay">
         <ButtonContainer>
-          <Button>Add to cart</Button>
+          {children}
+          <Button
+            onClick={() =>
+              addToCart({
+                id,
+                image,
+                title,
+                description,
+                price,
+                oldPrice,
+                discount,
+                isNew,
+              })
+            }
+          >
+            Add to cart
+          </Button>
           <InformationContainer>
-            <ShareContainer>
+            <ShareContainer onClick={() => setIsShareModalOpen(true)}>
               <ShareIcon src={share} alt="Share Icon" />
               <ShareText>Share</ShareText>
             </ShareContainer>
@@ -55,7 +80,7 @@ const ProductCard: React.FC<ProductCardProps> = ({
               <HeartIcon
                 src={isLiked ? heartRed : heart}
                 alt="Heart Icon"
-                onClick={() => SetIsLiked(!isLiked)}
+                onClick={() => toggleLike(id)}
               />
               <HeartText>Like</HeartText>
             </HeartContainer>
@@ -69,11 +94,15 @@ const ProductCard: React.FC<ProductCardProps> = ({
             <DescriptionProduct>{description}</DescriptionProduct>
           </Info>
           <Price>
-            <NewPrice>{price}</NewPrice>
-            {oldPrice && <OldPrice>{oldPrice}</OldPrice>}
+            <NewPrice>${price}</NewPrice>
+            {oldPrice && <OldPrice>${oldPrice}</OldPrice>}
           </Price>
         </Information>
       </InformationCard>
+      <ShareModal
+        isOpen={isShareModalOpen}
+        onClose={() => setIsShareModalOpen(false)}
+      />
     </Card>
   );
 };

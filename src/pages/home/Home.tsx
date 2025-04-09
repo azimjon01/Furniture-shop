@@ -7,11 +7,10 @@ const Home: React.FC = () => {
 
   return (
     <SHome.Container>
-      {/* Hero Section */}
       <SHome.Hero>
         <SHome.HeroText>
-          <h1>Modern Furniture for Your Home</h1>
-          <p>
+          <h1 style={{ cursor: "pointer" }}>Modern Furniture for Your Home</h1>
+          <p style={{ cursor: "pointer" }}>
             Explore our collection of high-quality furniture for your living
             space.
           </p>
@@ -22,7 +21,6 @@ const Home: React.FC = () => {
         />
       </SHome.Hero>
 
-      {/* Product Grid */}
       <SHome.ProductGrid>
         {products.map((product) => (
           <SHome.ProductCard key={product.id}>

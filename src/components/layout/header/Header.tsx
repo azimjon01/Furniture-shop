@@ -1,7 +1,6 @@
 import searchIcon from "../../../assets/icons/search-icon.svg";
 import cartIcon from "../../../assets/icons/cart-icon.svg";
 import heartIcon from "../../../assets/icons/heart-icon.svg";
-import avatar from "../../../assets/images/avatar.png";
 
 import {
   Avatar,
@@ -17,10 +16,26 @@ import {
   SearchBar,
   SearchIcon,
   SearchInput,
+  ToTalIcon,
 } from "./Header.styles";
 import { Dropdown } from "@/components/ui";
+import { useCartStore } from "@/components/store/useLikesStore";
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const Header = () => {
+  const { items } = useCartStore();
+  const totalItems = items.reduce((sum, item) => sum + (item.quantity || 1), 0);
+  const [query, setQuery] = useState("");
+  const navigate = useNavigate();
+
+  const handleSearch = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (query.trim() !== "") {
+      navigate(`/search?q=${query}`);
+    }
+  };
+
   return (
     <HeaderWrapper>
       <HeaderWrapperContainer>
@@ -52,17 +67,30 @@ const Header = () => {
             <NavLink to="/inspirations">Inspirations</NavLink>
           </NavLinkContainer>
         </Nav>
-
-        <SearchBar>
-          <SearchIcon src={searchIcon} alt="Search" />
-          <SearchInput type="text" placeholder="Search for minimalist chair" />
-        </SearchBar>
+        <form onSubmit={handleSearch}>
+          <SearchBar>
+            <SearchIcon src={searchIcon} alt="Search" />
+            <SearchInput
+              type="text"
+              placeholder="Search for minimalist chair"
+              value={query}
+              onChange={(e) => setQuery(e.target.value)}
+            />
+          </SearchBar>
+        </form>
       </HeaderWrapperContainer>
 
       <Icons>
-        <Icon src={heartIcon} alt="Favorites" />
-        <Icon src={cartIcon} alt="Cart" />
-        <Avatar src={avatar} alt="Profile" />
+        <NavLink to="/likes">
+          <Icon src={heartIcon} alt="Favorites" />
+        </NavLink>
+        <NavLink to="/products">
+          <Icon src={cartIcon} alt="Cart" />
+          {totalItems > 0 && <ToTalIcon>+{totalItems}</ToTalIcon>}
+        </NavLink>
+        <NavLink to="/profile">
+          <Avatar src="/assets/images/avatar-image/avatar2.jpg" alt="Profile" />
+        </NavLink>
       </Icons>
     </HeaderWrapper>
   );

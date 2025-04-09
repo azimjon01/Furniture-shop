@@ -6,17 +6,18 @@ const BigConatiner = styled.div({
   justifyContent: "space-between",
   alignItems: "center",
   gap: "30.35px",
-  marginTop: "83.48px",
   marginBottom: "41.72px",
 });
 
 const Grid = styled.div({
   position: "relative",
-  display: "flex",
-  flexWrap: "wrap",
-  justifyContent: "center",
-  alignItems: "center",
+  display: "grid",
+  gridTemplateColumns: "repeat(auto-fill,minmax(250px,1fr))",
   gap: "15.35px",
+  width: "100%",
+  maxWidth: "1200px",
+  margin: "0 auto",
+  justifyContent: "center",
 });
 
 const ProductsTitle = styled.h1({

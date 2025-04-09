@@ -1,5 +1,16 @@
+import { ProductList } from "@/components/ui";
+import { allData } from "@/data/allData";
+
 const LivingRoom = () => {
-  return <h1>Living Room</h1>;
+  return (
+    <>
+      <ProductList
+        productData={allData.categories.find(
+          (item) => item.category === "Living rooms",
+        )}
+      />
+    </>
+  );
 };
 
 export default LivingRoom;

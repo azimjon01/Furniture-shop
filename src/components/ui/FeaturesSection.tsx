@@ -6,7 +6,6 @@ import iconFour from "../../assets/icons/icon-wrapper/icon-four.svg";
 import FeatureCard from "./feature";
 
 const Section = styled.div({
-  // width: "86vw",
   height: "11vh",
   margin: "11.46vh 7.32vw",
   display: "flex",
